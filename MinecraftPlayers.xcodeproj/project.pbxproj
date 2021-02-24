@@ -1,0 +1,841 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		380C194C25E535AC00196437 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380C194B25E535AB00196437 /* ContentView.swift */; };
+		380C195125E5A4EB00196437 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380C195025E5A4EB00196437 /* SignUpView.swift */; };
+		38D2B8C925E6911700F54783 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38D2B8C825E6911700F54783 /* GoogleService-Info.plist */; };
+		38D7FB8525DFC55B0039F513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FB8425DFC55B0039F513 /* AppDelegate.swift */; };
+		38D7FB8725DFC55B0039F513 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FB8625DFC55B0039F513 /* SceneDelegate.swift */; };
+		38D7FB8925DFC55B0039F513 /* PlayerListVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FB8825DFC55B0039F513 /* PlayerListVIew.swift */; };
+		38D7FB8B25DFC55F0039F513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D7FB8A25DFC55F0039F513 /* Assets.xcassets */; };
+		38D7FB8E25DFC55F0039F513 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D7FB8D25DFC55F0039F513 /* Preview Assets.xcassets */; };
+		38D7FB9125DFC55F0039F513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D7FB8F25DFC55F0039F513 /* LaunchScreen.storyboard */; };
+		38D7FB9C25DFC55F0039F513 /* MinecraftPlayersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FB9B25DFC55F0039F513 /* MinecraftPlayersTests.swift */; };
+		38D7FBA725DFC55F0039F513 /* MinecraftPlayersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FBA625DFC55F0039F513 /* MinecraftPlayersUITests.swift */; };
+		38D7FBB525DFD20E0039F513 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FBB425DFD20E0039F513 /* Player.swift */; };
+		38D7FBB925DFE7CF0039F513 /* PlayerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FBB825DFE7CF0039F513 /* PlayerDetails.swift */; };
+		38D7FBBB25DFE8740039F513 /* PlayerGridElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FBBA25DFE8740039F513 /* PlayerGridElement.swift */; };
+		38D7FBBD25DFF7FA0039F513 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FBBC25DFF7FA0039F513 /* MainView.swift */; };
+		38DA816725E1A47E0082FD5D /* PlayersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA816625E1A47E0082FD5D /* PlayersViewModel.swift */; };
+		38DA817425E1AAC00082FD5D /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA817325E1AAC00082FD5D /* TestView.swift */; };
+		38EED68C25E2C3130030ACFB /* PlayersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EED68B25E2C3130030ACFB /* PlayersService.swift */; };
+		38EED69125E2CF440030ACFB /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EED69025E2CF440030ACFB /* MapView.swift */; };
+		38EED69925E2D3C20030ACFB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EED69825E2D3C20030ACFB /* SettingsView.swift */; };
+		38EED69E25E2D53C0030ACFB /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EED69D25E2D53C0030ACFB /* SettingsStore.swift */; };
+		8C70BFB3238DC6AA7E36D71B /* Pods_MinecraftPlayersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9233B7C09C958B7D4967EF /* Pods_MinecraftPlayersTests.framework */; };
+		A9FD96D2D8D3F64FFA8CF76D /* Pods_MinecraftPlayers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA65B63DC47649E1109D0C09 /* Pods_MinecraftPlayers.framework */; };
+		E26BEB87130FA296A3810C2C /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AFB5D590864F067A598C16 /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38D7FB9825DFC55F0039F513 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38D7FB7925DFC55B0039F513 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38D7FB8025DFC55B0039F513;
+			remoteInfo = MinecraftPlayers;
+		};
+		38D7FBA325DFC55F0039F513 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38D7FB7925DFC55B0039F513 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38D7FB8025DFC55B0039F513;
+			remoteInfo = MinecraftPlayers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0EC6DC6F7B81CA9B643B502A /* Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		110F5DA9E06DCE25D7572980 /* Pods-MinecraftPlayersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayersTests.release.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayersTests/Pods-MinecraftPlayersTests.release.xcconfig"; sourceTree = "<group>"; };
+		1D852C3F4319BCD514DAC518 /* Pods-MinecraftPlayersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayersTests.debug.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayersTests/Pods-MinecraftPlayersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		380C194B25E535AB00196437 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		380C195025E5A4EB00196437 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		38D2B8C825E6911700F54783 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		38D7FB8125DFC55B0039F513 /* MinecraftPlayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinecraftPlayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38D7FB8425DFC55B0039F513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		38D7FB8625DFC55B0039F513 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		38D7FB8825DFC55B0039F513 /* PlayerListVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListVIew.swift; sourceTree = "<group>"; };
+		38D7FB8A25DFC55F0039F513 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38D7FB8D25DFC55F0039F513 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		38D7FB9025DFC55F0039F513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		38D7FB9225DFC55F0039F513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38D7FB9725DFC55F0039F513 /* MinecraftPlayersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinecraftPlayersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38D7FB9B25DFC55F0039F513 /* MinecraftPlayersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinecraftPlayersTests.swift; sourceTree = "<group>"; };
+		38D7FB9D25DFC55F0039F513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38D7FBA225DFC55F0039F513 /* MinecraftPlayersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinecraftPlayersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38D7FBA625DFC55F0039F513 /* MinecraftPlayersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinecraftPlayersUITests.swift; sourceTree = "<group>"; };
+		38D7FBA825DFC55F0039F513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38D7FBB425DFD20E0039F513 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		38D7FBB825DFE7CF0039F513 /* PlayerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetails.swift; sourceTree = "<group>"; };
+		38D7FBBA25DFE8740039F513 /* PlayerGridElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerGridElement.swift; sourceTree = "<group>"; };
+		38D7FBBC25DFF7FA0039F513 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		38DA816625E1A47E0082FD5D /* PlayersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewModel.swift; sourceTree = "<group>"; };
+		38DA817325E1AAC00082FD5D /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		38EED68B25E2C3130030ACFB /* PlayersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersService.swift; sourceTree = "<group>"; };
+		38EED69025E2CF440030ACFB /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		38EED69825E2D3C20030ACFB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		38EED69D25E2D53C0030ACFB /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		57AFB5D590864F067A598C16 /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinecraftPlayers_MinecraftPlayersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D9233B7C09C958B7D4967EF /* Pods_MinecraftPlayersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinecraftPlayersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		931BF7A9DD8A4470138105D1 /* Pods-MinecraftPlayers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayers.debug.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayers/Pods-MinecraftPlayers.debug.xcconfig"; sourceTree = "<group>"; };
+		BA65B63DC47649E1109D0C09 /* Pods_MinecraftPlayers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinecraftPlayers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA4FB61475AAB701DE5B4EED /* Pods-MinecraftPlayers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayers.release.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayers/Pods-MinecraftPlayers.release.xcconfig"; sourceTree = "<group>"; };
+		E59D8F723BFDCE84E1D520DC /* Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38D7FB7E25DFC55B0039F513 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9FD96D2D8D3F64FFA8CF76D /* Pods_MinecraftPlayers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38D7FB9425DFC55F0039F513 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C70BFB3238DC6AA7E36D71B /* Pods_MinecraftPlayersTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38D7FB9F25DFC55F0039F513 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E26BEB87130FA296A3810C2C /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AFEC4EED925390EAACA78F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA65B63DC47649E1109D0C09 /* Pods_MinecraftPlayers.framework */,
+				57AFB5D590864F067A598C16 /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework */,
+				6D9233B7C09C958B7D4967EF /* Pods_MinecraftPlayersTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		38D7FB7825DFC55B0039F513 = {
+			isa = PBXGroup;
+			children = (
+				38D7FB8325DFC55B0039F513 /* MinecraftPlayers */,
+				38D7FB9A25DFC55F0039F513 /* MinecraftPlayersTests */,
+				38D7FBA525DFC55F0039F513 /* MinecraftPlayersUITests */,
+				38D7FB8225DFC55B0039F513 /* Products */,
+				438DECC48913D7B57E750CF5 /* Pods */,
+				1AFEC4EED925390EAACA78F7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		38D7FB8225DFC55B0039F513 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38D7FB8125DFC55B0039F513 /* MinecraftPlayers.app */,
+				38D7FB9725DFC55F0039F513 /* MinecraftPlayersTests.xctest */,
+				38D7FBA225DFC55F0039F513 /* MinecraftPlayersUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38D7FB8325DFC55B0039F513 /* MinecraftPlayers */ = {
+			isa = PBXGroup;
+			children = (
+				38DA816F25E1A73E0082FD5D /* Repositories */,
+				38DA816E25E1A6BD0082FD5D /* Services */,
+				38DA816525E1A41A0082FD5D /* ViewModels */,
+				38DA816425E1A3FA0082FD5D /* Models */,
+				38DA816025E1A21C0082FD5D /* Views */,
+				38D7FB8425DFC55B0039F513 /* AppDelegate.swift */,
+				38D7FB8625DFC55B0039F513 /* SceneDelegate.swift */,
+				38D7FB8A25DFC55F0039F513 /* Assets.xcassets */,
+				38D7FB8F25DFC55F0039F513 /* LaunchScreen.storyboard */,
+				38D7FB9225DFC55F0039F513 /* Info.plist */,
+				38D2B8C825E6911700F54783 /* GoogleService-Info.plist */,
+				38D7FB8C25DFC55F0039F513 /* Preview Content */,
+			);
+			path = MinecraftPlayers;
+			sourceTree = "<group>";
+		};
+		38D7FB8C25DFC55F0039F513 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				38D7FB8D25DFC55F0039F513 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		38D7FB9A25DFC55F0039F513 /* MinecraftPlayersTests */ = {
+			isa = PBXGroup;
+			children = (
+				38D7FB9B25DFC55F0039F513 /* MinecraftPlayersTests.swift */,
+				38D7FB9D25DFC55F0039F513 /* Info.plist */,
+			);
+			path = MinecraftPlayersTests;
+			sourceTree = "<group>";
+		};
+		38D7FBA525DFC55F0039F513 /* MinecraftPlayersUITests */ = {
+			isa = PBXGroup;
+			children = (
+				38D7FBA625DFC55F0039F513 /* MinecraftPlayersUITests.swift */,
+				38D7FBA825DFC55F0039F513 /* Info.plist */,
+			);
+			path = MinecraftPlayersUITests;
+			sourceTree = "<group>";
+		};
+		38DA816025E1A21C0082FD5D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38D7FBBA25DFE8740039F513 /* PlayerGridElement.swift */,
+				38D7FB8825DFC55B0039F513 /* PlayerListVIew.swift */,
+				38D7FBB825DFE7CF0039F513 /* PlayerDetails.swift */,
+				38D7FBBC25DFF7FA0039F513 /* MainView.swift */,
+				38DA817325E1AAC00082FD5D /* TestView.swift */,
+				38EED69025E2CF440030ACFB /* MapView.swift */,
+				38EED69825E2D3C20030ACFB /* SettingsView.swift */,
+				380C194B25E535AB00196437 /* ContentView.swift */,
+				380C195025E5A4EB00196437 /* SignUpView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		38DA816425E1A3FA0082FD5D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				38D7FBB425DFD20E0039F513 /* Player.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		38DA816525E1A41A0082FD5D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				38DA816625E1A47E0082FD5D /* PlayersViewModel.swift */,
+				38EED69D25E2D53C0030ACFB /* SettingsStore.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		38DA816E25E1A6BD0082FD5D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				38EED68B25E2C3130030ACFB /* PlayersService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		38DA816F25E1A73E0082FD5D /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		438DECC48913D7B57E750CF5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				931BF7A9DD8A4470138105D1 /* Pods-MinecraftPlayers.debug.xcconfig */,
+				CA4FB61475AAB701DE5B4EED /* Pods-MinecraftPlayers.release.xcconfig */,
+				0EC6DC6F7B81CA9B643B502A /* Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig */,
+				E59D8F723BFDCE84E1D520DC /* Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig */,
+				1D852C3F4319BCD514DAC518 /* Pods-MinecraftPlayersTests.debug.xcconfig */,
+				110F5DA9E06DCE25D7572980 /* Pods-MinecraftPlayersTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38D7FB8025DFC55B0039F513 /* MinecraftPlayers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38D7FBAB25DFC55F0039F513 /* Build configuration list for PBXNativeTarget "MinecraftPlayers" */;
+			buildPhases = (
+				2FF7CED889598570D05299DE /* [CP] Check Pods Manifest.lock */,
+				38D7FB7D25DFC55B0039F513 /* Sources */,
+				38D7FB7E25DFC55B0039F513 /* Frameworks */,
+				38D7FB7F25DFC55B0039F513 /* Resources */,
+				EA72CBC55D3C4808A7B728EF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MinecraftPlayers;
+			productName = MinecraftPlayers;
+			productReference = 38D7FB8125DFC55B0039F513 /* MinecraftPlayers.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38D7FB9625DFC55F0039F513 /* MinecraftPlayersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38D7FBAE25DFC55F0039F513 /* Build configuration list for PBXNativeTarget "MinecraftPlayersTests" */;
+			buildPhases = (
+				5D1E38154F04151020B833B9 /* [CP] Check Pods Manifest.lock */,
+				38D7FB9325DFC55F0039F513 /* Sources */,
+				38D7FB9425DFC55F0039F513 /* Frameworks */,
+				38D7FB9525DFC55F0039F513 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38D7FB9925DFC55F0039F513 /* PBXTargetDependency */,
+			);
+			name = MinecraftPlayersTests;
+			productName = MinecraftPlayersTests;
+			productReference = 38D7FB9725DFC55F0039F513 /* MinecraftPlayersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		38D7FBA125DFC55F0039F513 /* MinecraftPlayersUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38D7FBB125DFC55F0039F513 /* Build configuration list for PBXNativeTarget "MinecraftPlayersUITests" */;
+			buildPhases = (
+				55A6DBC05D8C1D48F35C423D /* [CP] Check Pods Manifest.lock */,
+				38D7FB9E25DFC55F0039F513 /* Sources */,
+				38D7FB9F25DFC55F0039F513 /* Frameworks */,
+				38D7FBA025DFC55F0039F513 /* Resources */,
+				FA0E99794D106DF634A4D0D6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38D7FBA425DFC55F0039F513 /* PBXTargetDependency */,
+			);
+			name = MinecraftPlayersUITests;
+			productName = MinecraftPlayersUITests;
+			productReference = 38D7FBA225DFC55F0039F513 /* MinecraftPlayersUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38D7FB7925DFC55B0039F513 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Ilyat;
+				TargetAttributes = {
+					38D7FB8025DFC55B0039F513 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					38D7FB9625DFC55F0039F513 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 38D7FB8025DFC55B0039F513;
+					};
+					38D7FBA125DFC55F0039F513 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 38D7FB8025DFC55B0039F513;
+					};
+				};
+			};
+			buildConfigurationList = 38D7FB7C25DFC55B0039F513 /* Build configuration list for PBXProject "MinecraftPlayers" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38D7FB7825DFC55B0039F513;
+			productRefGroup = 38D7FB8225DFC55B0039F513 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38D7FB8025DFC55B0039F513 /* MinecraftPlayers */,
+				38D7FB9625DFC55F0039F513 /* MinecraftPlayersTests */,
+				38D7FBA125DFC55F0039F513 /* MinecraftPlayersUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38D7FB7F25DFC55B0039F513 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D7FB9125DFC55F0039F513 /* LaunchScreen.storyboard in Resources */,
+				38D2B8C925E6911700F54783 /* GoogleService-Info.plist in Resources */,
+				38D7FB8E25DFC55F0039F513 /* Preview Assets.xcassets in Resources */,
+				38D7FB8B25DFC55F0039F513 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38D7FB9525DFC55F0039F513 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38D7FBA025DFC55F0039F513 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2FF7CED889598570D05299DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MinecraftPlayers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55A6DBC05D8C1D48F35C423D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MinecraftPlayers-MinecraftPlayersUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D1E38154F04151020B833B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MinecraftPlayersTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA72CBC55D3C4808A7B728EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers/Pods-MinecraftPlayers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers/Pods-MinecraftPlayers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers/Pods-MinecraftPlayers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA0E99794D106DF634A4D0D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38D7FB7D25DFC55B0039F513 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D7FBB525DFD20E0039F513 /* Player.swift in Sources */,
+				380C195125E5A4EB00196437 /* SignUpView.swift in Sources */,
+				38D7FBBD25DFF7FA0039F513 /* MainView.swift in Sources */,
+				380C194C25E535AC00196437 /* ContentView.swift in Sources */,
+				38D7FB8525DFC55B0039F513 /* AppDelegate.swift in Sources */,
+				38EED69E25E2D53C0030ACFB /* SettingsStore.swift in Sources */,
+				38EED69125E2CF440030ACFB /* MapView.swift in Sources */,
+				38D7FB8725DFC55B0039F513 /* SceneDelegate.swift in Sources */,
+				38D7FB8925DFC55B0039F513 /* PlayerListVIew.swift in Sources */,
+				38DA816725E1A47E0082FD5D /* PlayersViewModel.swift in Sources */,
+				38DA817425E1AAC00082FD5D /* TestView.swift in Sources */,
+				38D7FBB925DFE7CF0039F513 /* PlayerDetails.swift in Sources */,
+				38EED69925E2D3C20030ACFB /* SettingsView.swift in Sources */,
+				38EED68C25E2C3130030ACFB /* PlayersService.swift in Sources */,
+				38D7FBBB25DFE8740039F513 /* PlayerGridElement.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38D7FB9325DFC55F0039F513 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D7FB9C25DFC55F0039F513 /* MinecraftPlayersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38D7FB9E25DFC55F0039F513 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D7FBA725DFC55F0039F513 /* MinecraftPlayersUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38D7FB9925DFC55F0039F513 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38D7FB8025DFC55B0039F513 /* MinecraftPlayers */;
+			targetProxy = 38D7FB9825DFC55F0039F513 /* PBXContainerItemProxy */;
+		};
+		38D7FBA425DFC55F0039F513 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38D7FB8025DFC55B0039F513 /* MinecraftPlayers */;
+			targetProxy = 38D7FBA325DFC55F0039F513 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		38D7FB8F25DFC55F0039F513 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38D7FB9025DFC55F0039F513 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38D7FBA925DFC55F0039F513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		38D7FBAA25DFC55F0039F513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38D7FBAC25DFC55F0039F513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 931BF7A9DD8A4470138105D1 /* Pods-MinecraftPlayers.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MinecraftPlayers/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = MinecraftPlayers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ilyat.MinecraftPlayers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38D7FBAD25DFC55F0039F513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA4FB61475AAB701DE5B4EED /* Pods-MinecraftPlayers.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MinecraftPlayers/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = MinecraftPlayers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ilyat.MinecraftPlayers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		38D7FBAF25DFC55F0039F513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D852C3F4319BCD514DAC518 /* Pods-MinecraftPlayersTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MinecraftPlayersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ilyat.MinecraftPlayersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MinecraftPlayers.app/MinecraftPlayers";
+			};
+			name = Debug;
+		};
+		38D7FBB025DFC55F0039F513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 110F5DA9E06DCE25D7572980 /* Pods-MinecraftPlayersTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MinecraftPlayersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ilyat.MinecraftPlayersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MinecraftPlayers.app/MinecraftPlayers";
+			};
+			name = Release;
+		};
+		38D7FBB225DFC55F0039F513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EC6DC6F7B81CA9B643B502A /* Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MinecraftPlayersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ilyat.MinecraftPlayersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MinecraftPlayers;
+			};
+			name = Debug;
+		};
+		38D7FBB325DFC55F0039F513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E59D8F723BFDCE84E1D520DC /* Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MinecraftPlayersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ilyat.MinecraftPlayersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MinecraftPlayers;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38D7FB7C25DFC55B0039F513 /* Build configuration list for PBXProject "MinecraftPlayers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38D7FBA925DFC55F0039F513 /* Debug */,
+				38D7FBAA25DFC55F0039F513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38D7FBAB25DFC55F0039F513 /* Build configuration list for PBXNativeTarget "MinecraftPlayers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38D7FBAC25DFC55F0039F513 /* Debug */,
+				38D7FBAD25DFC55F0039F513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38D7FBAE25DFC55F0039F513 /* Build configuration list for PBXNativeTarget "MinecraftPlayersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38D7FBAF25DFC55F0039F513 /* Debug */,
+				38D7FBB025DFC55F0039F513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38D7FBB125DFC55F0039F513 /* Build configuration list for PBXNativeTarget "MinecraftPlayersUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38D7FBB225DFC55F0039F513 /* Debug */,
+				38D7FBB325DFC55F0039F513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38D7FB7925DFC55B0039F513 /* Project object */;
+}
