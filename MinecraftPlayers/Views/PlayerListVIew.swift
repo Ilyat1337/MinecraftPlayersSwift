@@ -11,7 +11,8 @@ import SwiftUI
 struct PlayerListView: View {
     let layout = Array(repeating: GridItem(.flexible(), spacing: 15), count: 2)
     
-    @EnvironmentObject var playersViewModel: PlayersViewModel
+    @EnvironmentObject private var playersViewModel: PlayersViewModel
+    @EnvironmentObject private var settings: SettingsStore
     
     var body: some View {
         NavigationView {
@@ -21,7 +22,7 @@ struct PlayerListView: View {
                         NavigationLink(destination: PlayerDetails(player: player)) {
                             PlayerGridElement(player: player)
                         }
-                        .accentColor(.black)
+                        .accentColor(settings.isDarkMode ? .white : .black)
                     }
                 }
                 .padding(.horizontal)
@@ -36,5 +37,6 @@ struct PlayerListView_Previews: PreviewProvider {
     static var previews: some View {
         PlayerListView()
             .environmentObject(getLoadedPlayersViewModel())
+            .environmentObject(getResetSettings())
     }
 }

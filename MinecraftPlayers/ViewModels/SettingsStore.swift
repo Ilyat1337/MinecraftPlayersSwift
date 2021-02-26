@@ -24,28 +24,6 @@ final class SettingsStore: ObservableObject {
     private static let defaultFontSize = 20.0
 
     private let defaults: UserDefaults
-
-    init(defaults: UserDefaults = .standard) {
-        self.defaults = defaults
-
-        defaults.register(defaults: [
-            Keys.locale: SettingsStore.defaultLocale,
-            Keys.isDarkMode: SettingsStore.defaultIsDarkMode,
-            Keys.fontSize: SettingsStore.defaultFontSize
-            ])
-        
-        locale = defaults.string(forKey: Keys.locale) ?? SettingsStore.defaultLocale
-        color = defaults.color(forKey: Keys.color) ?? SettingsStore.defaultColor
-        isDarkMode = defaults.bool(forKey: Keys.isDarkMode)
-        fontSize = defaults.double(forKey: Keys.fontSize)
-    }
-    
-    func resetDefaults() {
-        locale = SettingsStore.defaultLocale
-        color = SettingsStore.defaultColor
-        isDarkMode = SettingsStore.defaultIsDarkMode
-        fontSize = SettingsStore.defaultFontSize
-    }
     
     @Published var locale: String {
         didSet {
@@ -74,7 +52,28 @@ final class SettingsStore: ObservableObject {
             defaults.set(fontSize, forKey: Keys.fontSize)
         }
     }
+
+    init(defaults: UserDefaults = .standard) {
+        self.defaults = defaults
+
+        defaults.register(defaults: [
+            Keys.locale: SettingsStore.defaultLocale,
+            Keys.isDarkMode: SettingsStore.defaultIsDarkMode,
+            Keys.fontSize: SettingsStore.defaultFontSize
+            ])
+        
+        locale = defaults.string(forKey: Keys.locale) ?? SettingsStore.defaultLocale
+        color = defaults.color(forKey: Keys.color) ?? SettingsStore.defaultColor
+        isDarkMode = defaults.bool(forKey: Keys.isDarkMode)
+        fontSize = defaults.double(forKey: Keys.fontSize)
+    }
     
+    func resetDefaults() {
+        locale = SettingsStore.defaultLocale
+        color = SettingsStore.defaultColor
+        isDarkMode = SettingsStore.defaultIsDarkMode
+        fontSize = SettingsStore.defaultFontSize
+    }   
 }
 
 extension Numeric {

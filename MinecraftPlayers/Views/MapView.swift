@@ -16,7 +16,7 @@ struct MapView: View {
             Text("Map!")
             Button("Test") {
                 //playersViewModel.players.remove(at: 0)
-                playersViewModel.players[0].nick = "New name!"
+                playersViewModel.players[0].nickname = "New name!"
             }
         }
     }

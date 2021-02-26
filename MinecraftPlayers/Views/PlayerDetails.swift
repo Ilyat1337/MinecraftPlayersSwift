@@ -45,7 +45,7 @@ struct PlayerDetails: View {
                 //.overlay(Circle()
                     //.stroke(Color.orange, lineWidth: 4))
                 .shadow(radius: 10)
-            Text(player.nick)
+            Text(player.nickname)
                 .font(.title)
             Divider()
             VStack(alignment: .leading) {

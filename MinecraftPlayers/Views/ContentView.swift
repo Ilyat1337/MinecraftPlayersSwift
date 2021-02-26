@@ -7,36 +7,28 @@
 //
 
 import SwiftUI
+import Combine
 import Firebase
 import FirebaseAuth
 
 struct ContentView: View {
-    
-    @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
+    @EnvironmentObject private var loggedUserStore: LoggedUserStore
+    @EnvironmentObject private var settings: SettingsStore
     
     var body: some View {
-        
-        VStack{
-            
-            if status{
-                
-                Home()
+        VStack {
+            if loggedUserStore.userId.isEmpty {
+                SignInView()
             }
-            else{
-                
-                SignIn()
-            }
-            
-        }.animation(.spring())
-        .onAppear {
-            
-            NotificationCenter.default.addObserver(forName: NSNotification.Name("statusChange"), object: nil, queue: .main) { (_) in
-                
-                let status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
-                self.status = status
+            else {
+                MainView()
             }
         }
-        
+        .animation(.spring())
+        .onAppear {
+            
+        }
+        .environment(\.colorScheme, settings.colorScheme)
     }
 }
 
@@ -292,6 +284,9 @@ func signUpWithEmail(email: String,password : String,completion: @escaping (Bool
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        let viewModel = SignInViewModel(FirebaseAuthenticationService(), LoggedUserStore())
+        SignInView()
+            .environmentObject(getResetLoggedUserStore())
+            .environmentObject(viewModel)
     }
 }

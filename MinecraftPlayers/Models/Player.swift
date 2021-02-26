@@ -43,7 +43,7 @@ struct Player: Identifiable, Codable {
     var email: String
     var password: String
     
-    var nick: String
+    var nickname: String
     var occupation: OccupationType
     var favouriteMob: MobType
     
@@ -61,6 +61,6 @@ struct Player: Identifiable, Codable {
 }
 
 let testData = Array(repeating:
-                        Player(email: "IlyaNotFound@enail.com", password: "1qazxsw2", nick: "IlyaNotFound", occupation: .mapArt, favouriteMob: .enderman, favouriteServerAddress: "mc.hypixel.net", privilege: .vipPlus, realworldName: "Ilya Trapashko", country: "Belarus", city: "Minsk", age: 19),
+                        Player(email: "IlyaNotFound@enail.com", password: "1qazxsw2", nickname: "IlyaNotFound", occupation: .mapArt, favouriteMob: .enderman, favouriteServerAddress: "mc.hypixel.net", privilege: .vipPlus, realworldName: "Ilya Trapashko", country: "Belarus", city: "Minsk", age: 19),
                      count: 5)
 

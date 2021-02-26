@@ -17,7 +17,7 @@ struct PlayerGridElement: View {
                 .resizable()
                 .cornerRadius(10)
                 .aspectRatio(1, contentMode: .fit)
-                //.padding(.horizontal, 20)
+                .padding(.horizontal, 20)
                 
                 //.frame(width: 80, height: 80)
                 //.cornerRadius(10)
@@ -31,7 +31,7 @@ struct PlayerGridElement: View {
 //                    .font(.subheadline)
 //                    .foregroundColor(.gray)
 //            }
-            Text(player.nick)
+            Text(player.nickname)
                 .font(.headline)
                 .lineLimit(1)
             Text(player.occupation.rawValue)

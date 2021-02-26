@@ -35,7 +35,10 @@ struct TestView: View {
     ]
     
     var body: some View {
+        ZStack {
+            Color.black.edgesIgnoringSafeArea(.all)
         ScrollView {
+            
             LazyVGrid(columns: layout, spacing: 20) {
                 ForEach(data, id: \.self) { item in
                     //Text(item)
@@ -44,7 +47,9 @@ struct TestView: View {
                 }
             }
             .padding(.horizontal)
+            }
         }
+        .environment(\.colorScheme, ColorScheme.dark)
     }
 }
 

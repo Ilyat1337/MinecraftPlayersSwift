@@ -9,10 +9,12 @@
 import SwiftUI
 
 struct SignUpView: View {
+    @StateObject var signUpViewModel = SignUpViewModel()
+    
     @State var email: String = ""
     @State var password: String = ""
     
-    @State var nick: String = ""
+    @State var nickname: String = ""
     @State var occupation: String = Player.OccupationType.survival.rawValue
     @State var favouriteMob: String = Player.MobType.zombie.rawValue
     
@@ -28,22 +30,16 @@ struct SignUpView: View {
     var body: some View {
         NavigationView {
             List {
-//                HStack {
-//                    Spacer()
-//                    Text("Sign Up")
-//                        .fontWeight(.heavy)
-//                        .font(.largeTitle)
-//                        .padding([.top,.bottom], 20)
-//                    Spacer()
-//                }
                 
                 Section {
                     HStack {
                         Spacer()
-                        Image("Ilyat")
+                        signUpViewModel.avatarImage
+                            .interpolation(.none)
                             .resizable()
                             .aspectRatio(1, contentMode: .fit)
                             .frame(width: 150)
+                            .cornerRadius(10)
                         Spacer()
                     }
                     
@@ -53,18 +49,12 @@ struct SignUpView: View {
                 Section(header: Text("Credentials")) {
                     TextField("Email address", text: $email)
                     TextField("Password", text: $password)
-                    //                    Picker(
-                    //                        selection: $occupation,
-                    //                        label: Text("Picker")
-                    //                    ) {
-                    //                        Text("Vriant A").tag("en")
-                    //                        Text("Variant B").tag("ru")
-                    //                        Text("Variant C").tag("rus")
-                    //                    }
                 }
                 
                 Section(header: Text("Ingame")) {
-                    TextField("Nickname", text: $nick)
+                    TextField("Nickname", text: $nickname, onCommit: {
+                        signUpViewModel.nicknameTextFieldCommit(nickname: nickname)
+                    })
                     Picker(selection: $occupation, label: Text("Occupation")) {
                         ForEach(Player.OccupationType.allCases, id: \.self.rawValue) {
                             Text($0.rawValue)

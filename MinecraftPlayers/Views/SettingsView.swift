@@ -8,18 +8,9 @@
 
 import SwiftUI
 
-struct LangInfo {
-    let locale: String
-    let lang: String
-    
-    init(_ locale: String, _ lang: String) {
-        self.locale = locale
-        self.lang = lang
-    }
-}
-
 struct SettingsView: View {
-    @EnvironmentObject var settings: SettingsStore
+    @EnvironmentObject private var settings: SettingsStore
+    @EnvironmentObject private var loggedUserStore: LoggedUserStore
     
     var body: some View {
         NavigationView {
@@ -52,7 +43,7 @@ struct SettingsView: View {
                 
                 Section {
                     Button(action: {
-                        self.settings.resetDefaults()
+                        loggedUserStore.userId = ""
                     }) {
                         HStack {
                             Spacer()
@@ -72,6 +63,7 @@ struct SettingsView: View {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
-            .environmentObject(getResetSettings())            
+            .environmentObject(getResetSettings())
+            .environmentObject(getResetLoggedUserStore())
     }
 }

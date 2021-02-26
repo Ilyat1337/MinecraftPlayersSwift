@@ -15,7 +15,7 @@ protocol PlayersService {
 
 class ArrayPlayersService: PlayersService {
     var players = Array(repeating: 0, count: 8).map { (Int) -> Player in
-        return Player(email: "IlyaNotFound@enail.com", password: "1qazxsw2", nick: "IlyaNotFound", occupation: .mapArt, favouriteMob: .enderman, favouriteServerAddress: "mc.hypixel.net", privilege: .vipPlus, realworldName: "Ilya Trapashko", country: "Belarus", city: "Minsk", age: 19) }
+        return Player(email: "IlyaNotFound@enail.com", password: "1qazxsw2", nickname: "IlyaNotFound", occupation: .mapArt, favouriteMob: .enderman, favouriteServerAddress: "mc.hypixel.net", privilege: .vipPlus, realworldName: "Ilya Trapashko", country: "Belarus", city: "Minsk", age: 19) }
     
     func getAllPlayers() -> [Player] {
         return players
