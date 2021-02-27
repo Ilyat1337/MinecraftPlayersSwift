@@ -11,6 +11,7 @@ target 'MinecraftPlayers' do
   # https://firebase.google.com/docs/ios/setup#available-pods
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
   pod 'Firebase/Storage'
 
   target 'MinecraftPlayersTests' do

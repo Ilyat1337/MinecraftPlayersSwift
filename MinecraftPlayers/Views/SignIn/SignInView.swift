@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct SignInView: View {
-    @EnvironmentObject var viewModel: SignInViewModel
+    @ObservedObject var viewModel: SignInViewModel
     
     var body: some View {
         ZStack {
@@ -57,13 +57,10 @@ struct SignInView: View {
                     
                 }
                 .padding()
-                .alert(isPresented: $viewModel.showAlert) {
-                    Alert(title: Text("Error"), message: Text(viewModel.errorMessage), dismissButton: .default(Text("Ok")))
-                }
                 
                 VStack{
                     HStack(spacing: 8) {
-                        Text("Don't Have An Account ?")
+                        Text("Don't Have An Account?")
                             .foregroundColor(Color.gray)
                         
                         Button(action: {
@@ -76,9 +73,12 @@ struct SignInView: View {
                     
                 }
                 .sheet(isPresented: $viewModel.showSignUpView) {
-                    //SignUp(show: self.$show)
+                    SignUpView(viewModel: DependencyFactory.shared.getSignUpViewModel())
                 }
             }
+        }
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(title: Text("Error"), message: Text(viewModel.errorMessage), dismissButton: .default(Text("Ok")))
         }
         .onAppear() {
             print("Sign in appear!")
@@ -92,8 +92,6 @@ struct SignInView: View {
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = SignInViewModel(FirebaseAuthenticationService(), LoggedUserStore())
-        SignInView()
-            .environmentObject(viewModel)
+        SignInView(viewModel: DependencyFactory.shared.getSignInViewModel())
     }
 }

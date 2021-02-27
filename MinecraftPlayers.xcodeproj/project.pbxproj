@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08EBDF9811B975484EA4008D /* Pods_MinecraftPlayers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C488D0F25283A6384984126 /* Pods_MinecraftPlayers.framework */; };
 		380C194C25E535AC00196437 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380C194B25E535AB00196437 /* ContentView.swift */; };
 		380C195125E5A4EB00196437 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380C195025E5A4EB00196437 /* SignUpView.swift */; };
 		382599BC25E7C29100B6747B /* AvatarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382599BB25E7C29100B6747B /* AvatarService.swift */; };
@@ -30,13 +29,17 @@
 		38D7FBBD25DFF7FA0039F513 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FBBC25DFF7FA0039F513 /* MainView.swift */; };
 		38DA816725E1A47E0082FD5D /* PlayersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA816625E1A47E0082FD5D /* PlayersViewModel.swift */; };
 		38DA817425E1AAC00082FD5D /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA817325E1AAC00082FD5D /* TestView.swift */; };
+		38E0762025EA6C5C007899F9 /* DependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0761F25EA6C5C007899F9 /* DependencyFactory.swift */; };
+		38E0762825EAA035007899F9 /* MediaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0762725EAA035007899F9 /* MediaRepository.swift */; };
 		38EED68C25E2C3130030ACFB /* PlayersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EED68B25E2C3130030ACFB /* PlayersService.swift */; };
 		38EED69125E2CF440030ACFB /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EED69025E2CF440030ACFB /* MapView.swift */; };
 		38EED69925E2D3C20030ACFB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EED69825E2D3C20030ACFB /* SettingsView.swift */; };
 		38EED69E25E2D53C0030ACFB /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EED69D25E2D53C0030ACFB /* SettingsStore.swift */; };
 		38F1325025E939400031AADF /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1324F25E939400031AADF /* SignInView.swift */; };
-		AEBA7FF04B9FB6061D9AAAD2 /* Pods_MinecraftPlayersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66DA69AE4050FE19E153B454 /* Pods_MinecraftPlayersTests.framework */; };
-		E3FBB9B2E38EF19CFA0B6638 /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6AAFED97A1384FD8A0CE95 /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework */; };
+		38F1325D25E9648C0031AADF /* PlayersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1325C25E9648C0031AADF /* PlayersRepository.swift */; };
+		64FA793126CC3C6450CFDC3B /* Pods_MinecraftPlayersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F4A85B6C872831942EFB7A /* Pods_MinecraftPlayersTests.framework */; };
+		AF8D02ABE530C2ABD984A0D8 /* Pods_MinecraftPlayers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BAB997894821E33DADECD23 /* Pods_MinecraftPlayers.framework */; };
+		E58B986BA70C48C435EEFEF1 /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61BF92960DE934C0DC349AD /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C488D0F25283A6384984126 /* Pods_MinecraftPlayers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinecraftPlayers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D822E0F77CF31466DE1FBE6 /* Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig"; sourceTree = "<group>"; };
+		315F99E64922AB7EE3603E1B /* Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig"; sourceTree = "<group>"; };
 		380C194B25E535AB00196437 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		380C195025E5A4EB00196437 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		382599BB25E7C29100B6747B /* AvatarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarService.swift; sourceTree = "<group>"; };
@@ -87,18 +89,22 @@
 		38D7FBBC25DFF7FA0039F513 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		38DA816625E1A47E0082FD5D /* PlayersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewModel.swift; sourceTree = "<group>"; };
 		38DA817325E1AAC00082FD5D /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		38E0761F25EA6C5C007899F9 /* DependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyFactory.swift; sourceTree = "<group>"; };
+		38E0762725EAA035007899F9 /* MediaRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaRepository.swift; sourceTree = "<group>"; };
 		38EED68B25E2C3130030ACFB /* PlayersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersService.swift; sourceTree = "<group>"; };
 		38EED69025E2CF440030ACFB /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		38EED69825E2D3C20030ACFB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		38EED69D25E2D53C0030ACFB /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		38F1324F25E939400031AADF /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		3CAE3AFA5A0DD07B329E3F68 /* Pods-MinecraftPlayersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayersTests.release.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayersTests/Pods-MinecraftPlayersTests.release.xcconfig"; sourceTree = "<group>"; };
-		405FFE2D7410696929BF8D24 /* Pods-MinecraftPlayersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayersTests.debug.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayersTests/Pods-MinecraftPlayersTests.debug.xcconfig"; sourceTree = "<group>"; };
-		66DA69AE4050FE19E153B454 /* Pods_MinecraftPlayersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinecraftPlayersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D89357CAA9D8646097EC995 /* Pods-MinecraftPlayers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayers.debug.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayers/Pods-MinecraftPlayers.debug.xcconfig"; sourceTree = "<group>"; };
-		EE620EEDF3100A81D4CE9881 /* Pods-MinecraftPlayers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayers.release.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayers/Pods-MinecraftPlayers.release.xcconfig"; sourceTree = "<group>"; };
-		EF6AAFED97A1384FD8A0CE95 /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinecraftPlayers_MinecraftPlayersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5BE0296893EDECE14BC6D77 /* Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		38F1325C25E9648C0031AADF /* PlayersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersRepository.swift; sourceTree = "<group>"; };
+		4BAB997894821E33DADECD23 /* Pods_MinecraftPlayers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinecraftPlayers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6503EA7389947156519489A7 /* Pods-MinecraftPlayers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayers.debug.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayers/Pods-MinecraftPlayers.debug.xcconfig"; sourceTree = "<group>"; };
+		795785AFBBE54F5B58DB4F6B /* Pods-MinecraftPlayers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayers.release.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayers/Pods-MinecraftPlayers.release.xcconfig"; sourceTree = "<group>"; };
+		96B7668C7A76E6E8FC5AA0F3 /* Pods-MinecraftPlayersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayersTests.release.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayersTests/Pods-MinecraftPlayersTests.release.xcconfig"; sourceTree = "<group>"; };
+		AAA3793EB5774DA7AFEC019E /* Pods-MinecraftPlayersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayersTests.debug.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayersTests/Pods-MinecraftPlayersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD6A449EC0D07E7C021CA74E /* Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D61BF92960DE934C0DC349AD /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinecraftPlayers_MinecraftPlayersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7F4A85B6C872831942EFB7A /* Pods_MinecraftPlayersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinecraftPlayersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08EBDF9811B975484EA4008D /* Pods_MinecraftPlayers.framework in Frameworks */,
+				AF8D02ABE530C2ABD984A0D8 /* Pods_MinecraftPlayers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEBA7FF04B9FB6061D9AAAD2 /* Pods_MinecraftPlayersTests.framework in Frameworks */,
+				64FA793126CC3C6450CFDC3B /* Pods_MinecraftPlayersTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3FBB9B2E38EF19CFA0B6638 /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework in Frameworks */,
+				E58B986BA70C48C435EEFEF1 /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +143,7 @@
 				38D7FBA525DFC55F0039F513 /* MinecraftPlayersUITests */,
 				38D7FB8225DFC55B0039F513 /* Products */,
 				438DECC48913D7B57E750CF5 /* Pods */,
-				F25EEC0EF8FAAE620BF5F2B5 /* Frameworks */,
+				C5D9F7383B38F44C19F9A4F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,15 +160,12 @@
 		38D7FB8325DFC55B0039F513 /* MinecraftPlayers */ = {
 			isa = PBXGroup;
 			children = (
-				382599BB25E7C29100B6747B /* AvatarService.swift */,
-				38D1BE2325E91D05000735B3 /* AuthenticationService.swift */,
+				38E0761B25EA6AE3007899F9 /* App */,
 				38F1325825E95C7C0031AADF /* Services */,
 				38DA816F25E1A73E0082FD5D /* Repositories */,
 				38DA816525E1A41A0082FD5D /* ViewModels */,
 				38DA816425E1A3FA0082FD5D /* Models */,
 				38DA816025E1A21C0082FD5D /* Views */,
-				38D7FB8425DFC55B0039F513 /* AppDelegate.swift */,
-				38D7FB8625DFC55B0039F513 /* SceneDelegate.swift */,
 				38D7FB8A25DFC55F0039F513 /* Assets.xcassets */,
 				38D7FB8F25DFC55F0039F513 /* LaunchScreen.storyboard */,
 				38D7FB9225DFC55F0039F513 /* Info.plist */,
@@ -201,6 +204,7 @@
 		38DA816025E1A21C0082FD5D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				38E0761725EA5AF9007899F9 /* SignUp */,
 				38F1325425E93C060031AADF /* SignIn */,
 				38D7FBBA25DFE8740039F513 /* PlayerGridElement.swift */,
 				38D7FB8825DFC55B0039F513 /* PlayerListVIew.swift */,
@@ -210,7 +214,6 @@
 				38EED69025E2CF440030ACFB /* MapView.swift */,
 				38EED69825E2D3C20030ACFB /* SettingsView.swift */,
 				380C194B25E535AB00196437 /* ContentView.swift */,
-				380C195025E5A4EB00196437 /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,7 +231,6 @@
 			children = (
 				38DA816625E1A47E0082FD5D /* PlayersViewModel.swift */,
 				38EED69D25E2D53C0030ACFB /* SettingsStore.swift */,
-				382599C025E7CCF700B6747B /* SignUpViewModel.swift */,
 				38D1BE2B25E9223D000735B3 /* LoggedUserStore.swift */,
 			);
 			path = ViewModels;
@@ -237,9 +239,30 @@
 		38DA816F25E1A73E0082FD5D /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				38F1325C25E9648C0031AADF /* PlayersRepository.swift */,
 				38EED68B25E2C3130030ACFB /* PlayersService.swift */,
+				38E0762725EAA035007899F9 /* MediaRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		38E0761725EA5AF9007899F9 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				380C195025E5A4EB00196437 /* SignUpView.swift */,
+				382599C025E7CCF700B6747B /* SignUpViewModel.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		38E0761B25EA6AE3007899F9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				38D7FB8425DFC55B0039F513 /* AppDelegate.swift */,
+				38D7FB8625DFC55B0039F513 /* SceneDelegate.swift */,
+				38E0761F25EA6C5C007899F9 /* DependencyFactory.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		38F1325425E93C060031AADF /* SignIn */ = {
@@ -254,6 +277,8 @@
 		38F1325825E95C7C0031AADF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				382599BB25E7C29100B6747B /* AvatarService.swift */,
+				38D1BE2325E91D05000735B3 /* AuthenticationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -261,22 +286,22 @@
 		438DECC48913D7B57E750CF5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9D89357CAA9D8646097EC995 /* Pods-MinecraftPlayers.debug.xcconfig */,
-				EE620EEDF3100A81D4CE9881 /* Pods-MinecraftPlayers.release.xcconfig */,
-				F5BE0296893EDECE14BC6D77 /* Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig */,
-				2D822E0F77CF31466DE1FBE6 /* Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig */,
-				405FFE2D7410696929BF8D24 /* Pods-MinecraftPlayersTests.debug.xcconfig */,
-				3CAE3AFA5A0DD07B329E3F68 /* Pods-MinecraftPlayersTests.release.xcconfig */,
+				6503EA7389947156519489A7 /* Pods-MinecraftPlayers.debug.xcconfig */,
+				795785AFBBE54F5B58DB4F6B /* Pods-MinecraftPlayers.release.xcconfig */,
+				CD6A449EC0D07E7C021CA74E /* Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig */,
+				315F99E64922AB7EE3603E1B /* Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig */,
+				AAA3793EB5774DA7AFEC019E /* Pods-MinecraftPlayersTests.debug.xcconfig */,
+				96B7668C7A76E6E8FC5AA0F3 /* Pods-MinecraftPlayersTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		F25EEC0EF8FAAE620BF5F2B5 /* Frameworks */ = {
+		C5D9F7383B38F44C19F9A4F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2C488D0F25283A6384984126 /* Pods_MinecraftPlayers.framework */,
-				EF6AAFED97A1384FD8A0CE95 /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework */,
-				66DA69AE4050FE19E153B454 /* Pods_MinecraftPlayersTests.framework */,
+				4BAB997894821E33DADECD23 /* Pods_MinecraftPlayers.framework */,
+				D61BF92960DE934C0DC349AD /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework */,
+				D7F4A85B6C872831942EFB7A /* Pods_MinecraftPlayersTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -288,11 +313,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38D7FBAB25DFC55F0039F513 /* Build configuration list for PBXNativeTarget "MinecraftPlayers" */;
 			buildPhases = (
-				45F2338511878D1A735E35F8 /* [CP] Check Pods Manifest.lock */,
+				5C4E0AE7BFB7FA466D03A6BB /* [CP] Check Pods Manifest.lock */,
 				38D7FB7D25DFC55B0039F513 /* Sources */,
 				38D7FB7E25DFC55B0039F513 /* Frameworks */,
 				38D7FB7F25DFC55B0039F513 /* Resources */,
-				99F4CC9F829C34B8ECAF2405 /* [CP] Embed Pods Frameworks */,
+				C5C296C6794240BEB9D30840 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -307,7 +332,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38D7FBAE25DFC55F0039F513 /* Build configuration list for PBXNativeTarget "MinecraftPlayersTests" */;
 			buildPhases = (
-				1BA7640A6B3DD98E81253345 /* [CP] Check Pods Manifest.lock */,
+				946D5054E3CD6E77D07D6DB3 /* [CP] Check Pods Manifest.lock */,
 				38D7FB9325DFC55F0039F513 /* Sources */,
 				38D7FB9425DFC55F0039F513 /* Frameworks */,
 				38D7FB9525DFC55F0039F513 /* Resources */,
@@ -326,11 +351,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38D7FBB125DFC55F0039F513 /* Build configuration list for PBXNativeTarget "MinecraftPlayersUITests" */;
 			buildPhases = (
-				38766B7E07EC62AE1B7E8874 /* [CP] Check Pods Manifest.lock */,
+				DB469FAC7736A09AD1300212 /* [CP] Check Pods Manifest.lock */,
 				38D7FB9E25DFC55F0039F513 /* Sources */,
 				38D7FB9F25DFC55F0039F513 /* Frameworks */,
 				38D7FBA025DFC55F0039F513 /* Resources */,
-				129C15221929A8AC95FC2AC0 /* [CP] Embed Pods Frameworks */,
+				BF8EF058577B68EF95F22EFB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -414,68 +439,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		129C15221929A8AC95FC2AC0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1BA7640A6B3DD98E81253345 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MinecraftPlayersTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		38766B7E07EC62AE1B7E8874 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MinecraftPlayers-MinecraftPlayersUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		45F2338511878D1A735E35F8 /* [CP] Check Pods Manifest.lock */ = {
+		5C4E0AE7BFB7FA466D03A6BB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -497,7 +461,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		99F4CC9F829C34B8ECAF2405 /* [CP] Embed Pods Frameworks */ = {
+		946D5054E3CD6E77D07D6DB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MinecraftPlayersTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF8EF058577B68EF95F22EFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5C296C6794240BEB9D30840 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -514,6 +517,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers/Pods-MinecraftPlayers-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DB469FAC7736A09AD1300212 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MinecraftPlayers-MinecraftPlayersUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -527,6 +552,7 @@
 				38D1BE2425E91D05000735B3 /* AuthenticationService.swift in Sources */,
 				38D1BE3125E923D7000735B3 /* SignInViewModel.swift in Sources */,
 				38D7FBBD25DFF7FA0039F513 /* MainView.swift in Sources */,
+				38E0762825EAA035007899F9 /* MediaRepository.swift in Sources */,
 				380C194C25E535AC00196437 /* ContentView.swift in Sources */,
 				38D7FB8525DFC55B0039F513 /* AppDelegate.swift in Sources */,
 				38EED69E25E2D53C0030ACFB /* SettingsStore.swift in Sources */,
@@ -536,9 +562,11 @@
 				38DA816725E1A47E0082FD5D /* PlayersViewModel.swift in Sources */,
 				38DA817425E1AAC00082FD5D /* TestView.swift in Sources */,
 				38D7FBB925DFE7CF0039F513 /* PlayerDetails.swift in Sources */,
+				38E0762025EA6C5C007899F9 /* DependencyFactory.swift in Sources */,
 				38F1325025E939400031AADF /* SignInView.swift in Sources */,
 				38EED69925E2D3C20030ACFB /* SettingsView.swift in Sources */,
 				38EED68C25E2C3130030ACFB /* PlayersService.swift in Sources */,
+				38F1325D25E9648C0031AADF /* PlayersRepository.swift in Sources */,
 				382599BC25E7C29100B6747B /* AvatarService.swift in Sources */,
 				38D1BE2C25E9223D000735B3 /* LoggedUserStore.swift in Sources */,
 				38D7FBBB25DFE8740039F513 /* PlayerGridElement.swift in Sources */,
@@ -706,7 +734,7 @@
 		};
 		38D7FBAC25DFC55F0039F513 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D89357CAA9D8646097EC995 /* Pods-MinecraftPlayers.debug.xcconfig */;
+			baseConfigurationReference = 6503EA7389947156519489A7 /* Pods-MinecraftPlayers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -727,7 +755,7 @@
 		};
 		38D7FBAD25DFC55F0039F513 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE620EEDF3100A81D4CE9881 /* Pods-MinecraftPlayers.release.xcconfig */;
+			baseConfigurationReference = 795785AFBBE54F5B58DB4F6B /* Pods-MinecraftPlayers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -748,13 +776,13 @@
 		};
 		38D7FBAF25DFC55F0039F513 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 405FFE2D7410696929BF8D24 /* Pods-MinecraftPlayersTests.debug.xcconfig */;
+			baseConfigurationReference = AAA3793EB5774DA7AFEC019E /* Pods-MinecraftPlayersTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MinecraftPlayersTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -770,13 +798,13 @@
 		};
 		38D7FBB025DFC55F0039F513 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CAE3AFA5A0DD07B329E3F68 /* Pods-MinecraftPlayersTests.release.xcconfig */;
+			baseConfigurationReference = 96B7668C7A76E6E8FC5AA0F3 /* Pods-MinecraftPlayersTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MinecraftPlayersTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -792,7 +820,7 @@
 		};
 		38D7FBB225DFC55F0039F513 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5BE0296893EDECE14BC6D77 /* Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig */;
+			baseConfigurationReference = CD6A449EC0D07E7C021CA74E /* Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -812,7 +840,7 @@
 		};
 		38D7FBB325DFC55F0039F513 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D822E0F77CF31466DE1FBE6 /* Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig */;
+			baseConfigurationReference = 315F99E64922AB7EE3603E1B /* Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

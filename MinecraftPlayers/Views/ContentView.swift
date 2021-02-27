@@ -18,7 +18,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             if loggedUserStore.userId.isEmpty {
-                SignInView()
+                SignInView(viewModel: DependencyFactory.shared.getSignInViewModel())
             }
             else {
                 MainView()
@@ -284,9 +284,6 @@ func signUpWithEmail(email: String,password : String,completion: @escaping (Bool
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = SignInViewModel(FirebaseAuthenticationService(), LoggedUserStore())
-        SignInView()
-            .environmentObject(getResetLoggedUserStore())
-            .environmentObject(viewModel)
+        SignInView(viewModel: DependencyFactory.shared.getSignInViewModel())
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import FirebaseFirestoreSwift
 
 struct Player: Identifiable, Codable {
     enum OccupationType: String, CaseIterable, Codable {
@@ -38,7 +39,7 @@ struct Player: Identifiable, Codable {
         case blaze = "Blaze"
     }
     
-    var id = UUID()
+    @DocumentID var id = UUID().uuidString
     
     var email: String
     var password: String
@@ -55,8 +56,11 @@ struct Player: Identifiable, Codable {
     var city: String
     var age: Int
     
+    @ExplicitNull
+    var avatarUrl: URL?
+    
     var image: Image {
-        get { return Image("Ilyat") }
+        get { return Image("Steve") }
     }
 }
 

@@ -14,6 +14,7 @@ struct PlayerGridElement: View {
     var body: some View {
         VStack(spacing: 3) {
             player.image
+                .interpolation(.none)
                 .resizable()
                 .cornerRadius(10)
                 .aspectRatio(1, contentMode: .fit)
@@ -24,13 +25,6 @@ struct PlayerGridElement: View {
 //                .overlay(
 //                    RoundedRectangle(cornerRadius: 10)
 //                        .stroke(Color.orange, lineWidth: 4)
-            //)
-//            VStack(alignment: .leading) {
-//                Text(player.nick)
-//                Text(player.occupation)
-//                    .font(.subheadline)
-//                    .foregroundColor(.gray)
-//            }
             Text(player.nickname)
                 .font(.headline)
                 .lineLimit(1)
@@ -44,7 +38,6 @@ struct PlayerGridElement: View {
         .padding(10)
         .overlay(RoundedRectangle(cornerRadius: 10)
                     .stroke(Color.orange, lineWidth: 4))
-        //.frame(width: 150)
         //.font(.system(size: 50))
         
     }

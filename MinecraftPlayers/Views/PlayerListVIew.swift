@@ -11,14 +11,14 @@ import SwiftUI
 struct PlayerListView: View {
     let layout = Array(repeating: GridItem(.flexible(), spacing: 15), count: 2)
     
-    @EnvironmentObject private var playersViewModel: PlayersViewModel
     @EnvironmentObject private var settings: SettingsStore
+    @ObservedObject var viewModal: PlayersViewModel
     
     var body: some View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: layout, spacing: 20) {
-                    ForEach(playersViewModel.players) { player in
+                    ForEach(viewModal.players) { player in
                         NavigationLink(destination: PlayerDetails(player: player)) {
                             PlayerGridElement(player: player)
                         }
@@ -28,6 +28,8 @@ struct PlayerListView: View {
                 .padding(.horizontal)
             }
             .navigationBarTitle(Text("Players"))
+            .padding(.top, 0.3)
+            
         }
         
     }
@@ -35,8 +37,7 @@ struct PlayerListView: View {
 
 struct PlayerListView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerListView()
-            .environmentObject(getLoadedPlayersViewModel())
+        PlayerListView(viewModal: getLoadedPlayersViewModel())
             .environmentObject(getResetSettings())
     }
 }

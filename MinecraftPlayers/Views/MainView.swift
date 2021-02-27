@@ -13,8 +13,8 @@ struct MainView: View {
     @State private var sliderState: CGFloat = 0
     
     var body: some View {
-        TabView(selection: $selectedTab) {
-            PlayerListView()
+        TabView(selection: $selectedTab) {           
+            PlayerListView(viewModal: DependencyFactory.shared.getPlayersViewModel())
                 .tabItem {
                     Label("List", systemImage: "person")
             }
@@ -33,6 +33,7 @@ struct MainView: View {
             .tag(2)
 
         }
+        //.
     }
 }
 
