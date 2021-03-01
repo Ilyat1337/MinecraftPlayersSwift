@@ -10,37 +10,36 @@ import SwiftUI
 
 struct MainView: View {
     @State private var selectedTab = 0
-    @State private var sliderState: CGFloat = 0
+    @EnvironmentObject private var playersStore: PlayersStore
     
     var body: some View {
         TabView(selection: $selectedTab) {           
-            PlayerListView(viewModal: DependencyFactory.shared.getPlayersViewModel())
+            PlayerListView()
                 .tabItem {
                     Label("List", systemImage: "person")
-            }
-            .tag(0)
+                }.tag(0)
 
             MapView()
                 .tabItem {
                     Label("Map", systemImage: "map")
-            }
-            .tag(1)
+                }.tag(1)
             
             SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gear")
-            }
-            .tag(2)
+                }.tag(2)
 
         }
-        //.
+        .onAppear() {
+            playersStore.loadAllPlayers()
+        }
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
-            .environmentObject(getLoadedPlayersViewModel())
+            .environmentObject(getLoadedPlayersStore())
             .environmentObject(getResetSettings())
     }
 }

@@ -66,23 +66,23 @@ class SignUpViewModel: ObservableObject {
             if handleError(error: error) {
                 return
             }
-            
-            mediaRepository.uploadAvatar(avatarData: avatarData) { url, error in
+
+            mediaRepository.uploadAvatar(avatarData: avatarData) { avatarId, error in
                 if handleError(error: error) {
                     return
                 }
-                
+
                 guard let userId = userId else {
                     return
                 }
-            
-                let player = Player(id: userId, email: email, password: password, nickname: nickname, occupation: occupation, favouriteMob: favouriteMob, favouriteServerAddress: self.favouriteServerAddress, privilege: privilege, realworldName: self.realworldName, country: country, city: city, age: Int(age) ?? 0, avatarUrl: url!)
-                
+
+                let player = Player(id: userId, email: email, password: password, nickname: nickname, occupation: occupation, favouriteMob: favouriteMob, favouriteServerAddress: favouriteServerAddress, privilege: privilege, realworldName: realworldName, country: country, city: city, age: Int(age) ?? 0, avatarId: avatarId!)
+
                 playersRepository.add(player) { error in
                     if handleError(error: error) {
                         return
                     }
-                    
+
                     self.loggedUserStore.userId = userId
                 }
             }

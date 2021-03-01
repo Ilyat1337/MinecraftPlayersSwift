@@ -37,7 +37,7 @@ struct PlayerDetails: View {
     
     var body: some View {
         ScrollView {
-            player.image
+            player.avatarImage
                 .interpolation(.none)
                 .resizable()
                 .frame(width: 120, height: 120)

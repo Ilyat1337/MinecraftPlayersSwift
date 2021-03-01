@@ -13,7 +13,7 @@ struct PlayerGridElement: View {
     
     var body: some View {
         VStack(spacing: 3) {
-            player.image
+            player.avatarImage
                 .interpolation(.none)
                 .resizable()
                 .cornerRadius(10)

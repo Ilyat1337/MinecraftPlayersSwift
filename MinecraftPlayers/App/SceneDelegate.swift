@@ -26,6 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let contentView = ContentView()
             .environmentObject(DependencyFactory.shared.getSettingsStore())
             .environmentObject(DependencyFactory.shared.getLoggedUserStore())
+            .environmentObject(DependencyFactory.shared.getPlayersStore())
         //let contentView = SignUpView()
 
         // Use a UIHostingController as window root view controller.

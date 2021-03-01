@@ -17,6 +17,11 @@ class DependencyFactory {
     private let avatarService = AvatarService()
     private let playersRepository = FirebasePlayersRepository()
     private let mediaRepository = FirebaseMediaRepository()
+    private let playersStore: PlayersStore
+    
+    init() {
+        playersStore = PlayersStore(playersService: FirebasePlayersService(playersRepository: playersRepository, mediaRepository: mediaRepository))
+    }
     
     func getSettingsStore() -> SettingsStore {
         return settingsStore
@@ -34,7 +39,7 @@ class DependencyFactory {
         return SignUpViewModel(authenticationService, avatarService, playersRepository, mediaRepository, loggedUserStore)
     }
     
-    func getPlayersViewModel() -> PlayersViewModel {
-        return getLoadedPlayersViewModel()
+    func getPlayersStore() -> PlayersStore {
+        return playersStore
     }
 }

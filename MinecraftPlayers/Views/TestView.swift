@@ -34,22 +34,29 @@ struct TestView: View {
         GridItem(.flexible(), spacing: horizontalSpacing)
     ]
     
+    @State var output: String = ""
+    @State var input: String = ""
+    @State var typing = false
+    @State var temp = ""
     var body: some View {
-        ZStack {
-            Color.black.edgesIgnoringSafeArea(.all)
-        ScrollView {
-            
-            LazyVGrid(columns: layout, spacing: 20) {
-                ForEach(data, id: \.self) { item in
-                    //Text(item)
-                    PlayerGridElement(player: testData[0])
-                        //.font(.system(size: 40))
+        VStack {
+            if !typing {
+                if !output.isEmpty {
+                    Text("You typed: \(output)")
                 }
+            } else if !input.isEmpty {
+                Text("You are typing: \(input)")
             }
-            .padding(.horizontal)
-            }
+            TextField("", text: $input, onEditingChanged: {
+                print("Is typing: \($0)")
+                self.typing = $0
+            }, onCommit: {
+                print("On commit")
+                self.output = self.input
+            })
+            TextField("Ok!", text: $temp)
+            .background(Color.green.opacity(0.2))
         }
-        .environment(\.colorScheme, ColorScheme.dark)
     }
 }
 

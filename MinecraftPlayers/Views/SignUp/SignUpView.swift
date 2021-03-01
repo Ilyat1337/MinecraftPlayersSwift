@@ -35,8 +35,10 @@ struct SignUpView: View {
                 }
                 
                 Section(header: Text("Ingame")) {
-                    TextField("Nickname", text: $viewModel.nickname, onCommit: {
-                        viewModel.loadAvatarForNickname(nickname: viewModel.nickname)
+                    TextField("Nickname", text: $viewModel.nickname, onEditingChanged: { isEditStart in
+                        if !isEditStart {
+                            viewModel.loadAvatarForNickname(nickname: viewModel.nickname)
+                        }
                     })
                     Picker(selection: $viewModel.occupation, label: Text("Occupation")) {
                         ForEach(Player.OccupationType.allCases, id: \.self) {

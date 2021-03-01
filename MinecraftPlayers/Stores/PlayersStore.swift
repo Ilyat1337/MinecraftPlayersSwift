@@ -8,26 +8,29 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
-class PlayersViewModel: ObservableObject {
+class PlayersStore: ObservableObject {
     @Published var players: [Player] = []
     
     private var playersService: PlayersService
     
-    init(_ playersService: PlayersService) {
+    init(playersService: PlayersService) {
         self.playersService = playersService
     }
     
     func loadAllPlayers() {
-        players = playersService.getAllPlayers()
+        playersService.loadAllPlayers { players, error in
+            self.players = players
+        }
     }
 }
 
-
 //For preview
-func getLoadedPlayersViewModel() -> PlayersViewModel {
-    let playersViewModel = PlayersViewModel(ArrayPlayersService())
-    playersViewModel.loadAllPlayers()
-    return playersViewModel
+
+func getLoadedPlayersStore() -> PlayersStore {
+    let playersStore = PlayersStore(playersService: ArrayPlayersService())
+    playersStore.loadAllPlayers()
+    return playersStore
 }
 
