@@ -7,33 +7,56 @@
 //
 
 import SwiftUI
+import MapKit
 
-struct MapView: View {
-    //@EnvironmentObject var playersViewModel: PlayersViewModel
-    @State var scale: CGFloat = 1.0
+struct Location: Identifiable {
+    let id = UUID()
+    let coordinate: CLLocationCoordinate2D?
+}
+
+struct MapPlayerIcon: View {
+    var player: Player
     
     var body: some View {
-        VStack {
-//            Text("Map!")
-//            Button("Test") {
-//                //playersViewModel.players.remove(at: 0)
-//                playersViewModel.players[0].nickname = "New name!"
-//            }
-            Image("Steve")
+        VStack(spacing: 5) {
+            Text(player.nickname)
+                .padding(2)
+                .foregroundColor(Color(UIColor.systemBackground))
+                .colorInvert()
+                .background(Color.gray.opacity(0.3))
+            player.avatarImage
                 .interpolation(.none)
                 .resizable()
-                .scaleEffect(scale)
-                .frame(width: 100, height: 100)
-                .gesture(MagnificationGesture()
-                            .onChanged {value in
-                                self.scale = value.magnitude
-                            })
+                .cornerRadius(3)
+                .frame(width: 25, height: 25)
         }
     }
+}
+
+struct MapView: View {
+    private static let centerCoordinates = CLLocationCoordinate2D(latitude: 53.89168, longitude: 27.54893)
+    @EnvironmentObject var playersStore: PlayersStore
+    @State var coordinateRegion: MKCoordinateRegion = MKCoordinateRegion(center: centerCoordinates, span: MKCoordinateSpan(latitudeDelta: 11, longitudeDelta: 11))
+    
+    var body: some View {
+        NavigationView {
+            Map(coordinateRegion: $coordinateRegion, annotationItems: playersStore.players.filter { $0.location != nil }) { player in
+                MapAnnotation(coordinate: player.location!) {
+                    NavigationLink(destination: PlayerDetails(player: player)) {
+                        MapPlayerIcon(player: player)
+                    }
+                }
+            }
+            .ignoresSafeArea(edges: .top)
+        }
+    }
+    
 }
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
         MapView()
+            .environmentObject(getLoadedPlayersStore())
+        MapPlayerIcon(player: getPlayerForPreview())
     }
 }

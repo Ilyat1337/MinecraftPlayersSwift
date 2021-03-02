@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftUI
+import MapKit
 
 protocol PlayersService {
     func loadAllPlayers(completion: @escaping ([Player], Error?) -> Void)
@@ -46,8 +47,14 @@ class FirebasePlayersService: PlayersService {
 
 class ArrayPlayersService: PlayersService {
     func loadAllPlayers(completion: @escaping ([Player], Error?) -> Void) {
-        completion(Array(repeating: 0, count: 5).map { number in
-                    return getPlayerForPreview() }, nil)
+        let playersArray = Array(repeating: 0, count: 5).map { number in
+            return getPlayerForPreview() }
+        playersArray[0].location = CLLocationCoordinate2D(latitude: 53.89168, longitude: 27.54893)
+        playersArray[1].location = CLLocationCoordinate2D(latitude: 52.63, longitude: 30.91)
+        playersArray[2].location = CLLocationCoordinate2D(latitude: 55.48, longitude: 30.15)
+        playersArray[3].location = CLLocationCoordinate2D(latitude: 52.30, longitude: 23.83)
+        playersArray[4].location = CLLocationCoordinate2D(latitude: 53.75, longitude: 23.77)
+        completion(playersArray, nil)
     }
     
 

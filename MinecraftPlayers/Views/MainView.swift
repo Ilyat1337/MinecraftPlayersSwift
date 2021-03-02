@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @State private var selectedTab = 0
+    @State private var selectedTab = 1
     @EnvironmentObject private var playersStore: PlayersStore
     
     var body: some View {

@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import MapKit
 import FirebaseFirestoreSwift
 
 class Player: Identifiable, Codable {
@@ -59,6 +60,8 @@ class Player: Identifiable, Codable {
     var country: String
     var city: String
     var age: Int
+    
+    var location: CLLocationCoordinate2D?
     
     var avatarId: String = ""
     var avatarImage: Image = Image("Steve")
