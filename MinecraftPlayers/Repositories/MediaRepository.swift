@@ -11,7 +11,11 @@ import Firebase
 
 protocol MediaRepository {
     func uploadAvatar(avatarData: Data, completion: @escaping (String?, Error?) -> Void)
-    func loadAvatars(avatarIds: [String], completion: @escaping ([ImageData], Error?) -> Void)
+    func loadAvatars(avatarIds: [String], completion: @escaping ([LoadedMedia], Error?) -> Void)
+    func loadUserGallery(userId: String, imageIds: [String], completion: @escaping ([LoadedMedia], Error?) -> Void)
+    func uploadUserImages(userId: String, imagesData: [Data], completion: @escaping ([String], Error?) -> Void)
+    func deleteUserImages(userId: String, imageIds: [String], completion: @escaping (Error?) -> Void)
+    func uploadUserVideo(userId: String, videoData: Data, completion: @escaping (URL?, Error?) -> Void)
 }
 
 class FirebaseMediaRepository: MediaRepository {
@@ -19,66 +23,120 @@ class FirebaseMediaRepository: MediaRepository {
     
     private let avatarsPath = "avatars"
     private lazy var avatarsRef = Storage.storage().reference(withPath: avatarsPath)
+    private let galleryPath = "gallery"
+    private let videosPath = "videos"
     
     func uploadAvatar(avatarData: Data, completion: @escaping (String?, Error?) -> Void) {
-        let avatarId = UUID().uuidString
-        let avatarRef = avatarsRef.child(avatarId)
-        avatarRef.putData(avatarData, metadata: nil) { metadata, error in
+        let loadedAvatar = LoadedMedia(UUID().uuidString, avatarData)
+        let avatarRef = avatarsRef.child(loadedAvatar.id)
+        uploadMedia(direcoryRef: avatarRef, loadedMedia: loadedAvatar) { avatarId, error in
+            completion(loadedAvatar.id, error)
+        }
+    }
+    
+    func loadAvatars(avatarIds: [String], completion: @escaping ([LoadedMedia], Error?) -> Void) {
+        waitForAllTasks(directoryRef: avatarsRef, tasksData: avatarIds, task: downloadMedia) { (imagesData, error) in
+            completion(imagesData, error)
+        }
+    }
+    
+    func loadUserGallery(userId: String, imageIds: [String], completion: @escaping ([LoadedMedia], Error?) -> Void) {
+        let galleryRef = getUserGalleryRef(userId: userId)
+        waitForAllTasks(directoryRef: galleryRef, tasksData: imageIds, task: downloadMedia) { (imagesInfo, error) in
+            completion(imagesInfo, error)
+        }
+    }
+    
+    private func downloadMedia(directoryRef: StorageReference, medaiId: String,
+               completion: @escaping (LoadedMedia?, Error?) -> Void) {
+        directoryRef.child(medaiId).getData(maxSize: maxImageSize) { data, error in
             if let error = error {
                 completion(nil, error)
                 return
             }
             
-            completion(avatarId, error)
+            completion(LoadedMedia(medaiId, data!), nil)
         }
     }
     
-    func loadAvatars(avatarIds: [String], completion: @escaping ([ImageData], Error?) -> Void) {
-        self.downloadImageArray(directory: avatarsPath, imageIds: avatarIds) { (imageData, error) in
-            completion(imageData, error)
+    func uploadUserImages(userId: String, imagesData: [Data], completion: @escaping ([String], Error?) -> Void) {
+        let loadedImages = imagesData.map { LoadedMedia(UUID().uuidString, $0) }
+        let galleryRef = getUserGalleryRef(userId: userId)
+        waitForAllTasks(directoryRef: galleryRef, tasksData: loadedImages, task: uploadMedia) { imageIds, error in
+            completion(imageIds, error)
         }
     }
     
-    private func downloadImageArray(directory: String, imageIds: [String], completion: @escaping ([ImageData], Error?) -> Void) {
-        let directoryRef = Storage.storage().reference(withPath: directory)
-        
-        var downloadedImages = [ImageData]()
-        var downloadCount = 0
+    private func uploadMedia(direcoryRef: StorageReference, loadedMedia: LoadedMedia,
+             completion: @escaping (String?, Error?) -> Void) {
+        direcoryRef.child(loadedMedia.id).putData(loadedMedia.data, metadata: nil) { metadata, error in
+            completion(loadedMedia.id, error)
+        }
+    }
+    
+    func deleteUserImages(userId: String, imageIds: [String], completion: @escaping (Error?) -> Void) {
+        let galleryRef = getUserGalleryRef(userId: userId)
+        waitForAllTasks(directoryRef: galleryRef, tasksData: imageIds, task: deleteMedia) { void, error in
+            completion(error)
+        }
+    }
+    
+    private func deleteMedia(direcoryRef: StorageReference, mediaId: String,
+                 completion: @escaping (Void?, Error?) -> Void) {
+        direcoryRef.child(mediaId).delete { error in
+            completion(nil, error)
+        }
+    }
+    
+    private func getUserGalleryRef(userId: String) -> StorageReference {
+        return Storage.storage().reference().child(userId).child(galleryPath)
+    }
+    
+    func uploadUserVideo(userId: String, videoData: Data, completion: @escaping (URL?, Error?) -> Void) {
+        let videoId = UUID().uuidString
+        let videoRef = Storage.storage().reference().child(userId).child(videosPath).child(videoId)
+        videoRef.putData(videoData, metadata: nil) { metadata, error in
+            if error != nil {
+                completion(nil, error)
+                return
+            }
+            
+            videoRef.downloadURL { url, error in
+                completion(url, error)
+            }
+        }
+    }
+    
+    private func waitForAllTasks<TaskData, ReturnType>(directoryRef: StorageReference, tasksData: [TaskData],
+               task: (StorageReference, TaskData, @escaping (ReturnType?, Error?) -> Void) -> Void, completion: @escaping ([ReturnType], Error?) -> Void) {
+        var results = [ReturnType]()
+        var taskCount = 0
         var isErrorOccured = false
-        var downloadTasks = [StorageDownloadTask]()
         let lock = NSLock()
         
-        print("Loading images...")
-
-        for imageId in imageIds {
-            let imageRef = directoryRef.child(imageId)
-
-            // Upload image to firebase
-            let uploadTask = imageRef.getData(maxSize: maxImageSize) { (data, error) in
+        for taskData in tasksData {
+            task(directoryRef, taskData) { (returnValue, error) in
                 if let error = error {
                     if !isErrorOccured {
                         isErrorOccured = true
-                        completion(downloadedImages, error)
+                        completion(results, error)
                     }
                     return
                 }
                 
                 lock.lock()
                 
-                downloadedImages.append(ImageData(imageId, data!))
-                downloadCount += 1
+                results.append(returnValue!)
+                taskCount += 1
                 
-                print("\(downloadCount) images loaded")
-                
-                if downloadCount == imageIds.count {
+                if taskCount == tasksData.count {
                     lock.unlock()
-                    completion(downloadedImages, nil)
+                    completion(results, nil)
                     return
                 }
                 
                 lock.unlock()
             }
-            downloadTasks.append(uploadTask)
         }
     }
 }

@@ -11,7 +11,7 @@
 		380C195125E5A4EB00196437 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380C195025E5A4EB00196437 /* SignUpView.swift */; };
 		382599BC25E7C29100B6747B /* AvatarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382599BB25E7C29100B6747B /* AvatarService.swift */; };
 		382599C125E7CCF700B6747B /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382599C025E7CCF700B6747B /* SignUpViewModel.swift */; };
-		38BE50F225ED012B009B1C05 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE50F125ED012B009B1C05 /* ImageData.swift */; };
+		38BE50F225ED012B009B1C05 /* LoadedMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE50F125ED012B009B1C05 /* LoadedMedia.swift */; };
 		38BE50FD25ED2E7E009B1C05 /* PlayersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE50FC25ED2E7E009B1C05 /* PlayersService.swift */; };
 		38D1BE2425E91D05000735B3 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D1BE2325E91D05000735B3 /* AuthenticationService.swift */; };
 		38D1BE2C25E9223D000735B3 /* LoggedUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D1BE2B25E9223D000735B3 /* LoggedUserStore.swift */; };
@@ -66,7 +66,7 @@
 		380C195025E5A4EB00196437 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		382599BB25E7C29100B6747B /* AvatarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarService.swift; sourceTree = "<group>"; };
 		382599C025E7CCF700B6747B /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		38BE50F125ED012B009B1C05 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
+		38BE50F125ED012B009B1C05 /* LoadedMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadedMedia.swift; sourceTree = "<group>"; };
 		38BE50FC25ED2E7E009B1C05 /* PlayersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersService.swift; sourceTree = "<group>"; };
 		38D1BE2325E91D05000735B3 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		38D1BE2B25E9223D000735B3 /* LoggedUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedUserStore.swift; sourceTree = "<group>"; };
@@ -224,7 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				38D7FBB425DFD20E0039F513 /* Player.swift */,
-				38BE50F125ED012B009B1C05 /* ImageData.swift */,
+				38BE50F125ED012B009B1C05 /* LoadedMedia.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -572,7 +572,7 @@
 				38F1325D25E9648C0031AADF /* PlayersRepository.swift in Sources */,
 				382599BC25E7C29100B6747B /* AvatarService.swift in Sources */,
 				38D1BE2C25E9223D000735B3 /* LoggedUserStore.swift in Sources */,
-				38BE50F225ED012B009B1C05 /* ImageData.swift in Sources */,
+				38BE50F225ED012B009B1C05 /* LoadedMedia.swift in Sources */,
 				38D7FBBB25DFE8740039F513 /* PlayerGridElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

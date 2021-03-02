@@ -1,5 +1,5 @@
 //
-//  ImageData.swift
+//  ImageInfo.swift
 //  MinecraftPlayers
 //
 //  Created by Ilyat on 3/1/21.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ImageData {
+struct LoadedMedia {
     var id: String
     var data: Data
     

@@ -15,26 +15,14 @@ protocol AuthenticationService {
 
 class FirebaseAuthenticationService: AuthenticationService {
     func signInWithEmail(email: String, password: String, completion: @escaping (String?, Error?) -> Void) {
-        Auth.auth().signIn(withEmail: email, password: password) { (res, error) in
-            
-            if let error = error {
-                completion(nil, error)
-                return
-            }
-            
-            completion(res?.user.uid, nil)
+        Auth.auth().signIn(withEmail: email, password: password) { res, error in
+            completion(res?.user.uid, error)
         }
     }
     
     func signUpWithEmail(email: String, password: String, completion: @escaping (String?, Error?) -> Void) {
-        Auth.auth().createUser(withEmail: email, password: password) { (res, error) in
-            
-            if let error = error {
-                completion(nil, error)
-                return
-            }
-            
-            completion(res?.user.uid, nil)
+        Auth.auth().createUser(withEmail: email, password: password) { res, error in
+            completion(res?.user.uid, error)
         }
     }
 }
