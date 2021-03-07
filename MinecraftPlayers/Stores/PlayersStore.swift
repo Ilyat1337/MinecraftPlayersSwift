@@ -11,6 +11,7 @@ import Combine
 import SwiftUI
 
 class PlayersStore: ObservableObject {
+    private var arePlayersLoaded = false
     @Published var players: [Player] = []
     
     private var playersService: PlayersService
@@ -20,8 +21,12 @@ class PlayersStore: ObservableObject {
     }
     
     func loadAllPlayers() {
-        playersService.loadAllPlayers { players, error in
-            self.players = players
+        if !arePlayersLoaded {
+            arePlayersLoaded = true
+            print("Loading players")
+            playersService.loadAllPlayers { players, error in
+                self.players = players
+            }
         }
     }
 }

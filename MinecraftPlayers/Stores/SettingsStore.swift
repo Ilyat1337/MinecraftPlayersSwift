@@ -15,13 +15,15 @@ final class SettingsStore: ObservableObject {
         static let locale = "locale"
         static let color = "color"
         static let isDarkMode = "color_scheme"
+        static let fontName = "font_name"
         static let fontSize = "font_size"
     }
     
     private static let defaultLocale = "en"
     private static let defaultColor = Color.orange
     private static let defaultIsDarkMode = false
-    private static let defaultFontSize = 20.0
+    private static let defaultFontName = "Helvetica"
+    private static let defaultFontSize: CGFloat = 17.0
 
     private let defaults: UserDefaults
     
@@ -47,7 +49,13 @@ final class SettingsStore: ObservableObject {
         }
     }
     
-    @Published var fontSize: Double {
+    @Published var fontName: String {
+        didSet {
+            defaults.set(fontName, forKey: Keys.fontName)
+        }
+    }
+    
+    @Published var fontSize: CGFloat {
         didSet {
             defaults.set(fontSize, forKey: Keys.fontSize)
         }
@@ -59,13 +67,15 @@ final class SettingsStore: ObservableObject {
         defaults.register(defaults: [
             Keys.locale: SettingsStore.defaultLocale,
             Keys.isDarkMode: SettingsStore.defaultIsDarkMode,
-            Keys.fontSize: SettingsStore.defaultFontSize
+            Keys.fontSize: SettingsStore.defaultFontSize,
+            Keys.fontName: SettingsStore.defaultFontName
             ])
         
         locale = defaults.string(forKey: Keys.locale) ?? SettingsStore.defaultLocale
         color = defaults.color(forKey: Keys.color) ?? SettingsStore.defaultColor
         isDarkMode = defaults.bool(forKey: Keys.isDarkMode)
-        fontSize = defaults.double(forKey: Keys.fontSize)
+        fontSize = CGFloat(defaults.float(forKey: Keys.fontSize))
+        fontName = defaults.string(forKey: Keys.fontName) ?? SettingsStore.defaultFontName
     }
     
     func resetDefaults() {
@@ -73,6 +83,7 @@ final class SettingsStore: ObservableObject {
         color = SettingsStore.defaultColor
         isDarkMode = SettingsStore.defaultIsDarkMode
         fontSize = SettingsStore.defaultFontSize
+        fontName = SettingsStore.defaultFontName
     }   
 }
 

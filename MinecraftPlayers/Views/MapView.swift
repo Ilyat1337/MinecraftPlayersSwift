@@ -9,12 +9,7 @@
 import SwiftUI
 import MapKit
 
-struct Location: Identifiable {
-    let id = UUID()
-    let coordinate: CLLocationCoordinate2D?
-}
-
-struct MapPlayerIcon: View {
+fileprivate struct MapPlayerIcon: View {
     var player: Player
     
     var body: some View {
@@ -35,22 +30,26 @@ struct MapPlayerIcon: View {
 
 struct MapView: View {
     private static let centerCoordinates = CLLocationCoordinate2D(latitude: 53.89168, longitude: 27.54893)
-    @EnvironmentObject var playersStore: PlayersStore
-    @State var coordinateRegion: MKCoordinateRegion = MKCoordinateRegion(center: centerCoordinates, span: MKCoordinateSpan(latitudeDelta: 11, longitudeDelta: 11))
+    @EnvironmentObject private var playersStore: PlayersStore
+    @State private var coordinateRegion: MKCoordinateRegion = MKCoordinateRegion(center: centerCoordinates, span: MKCoordinateSpan(latitudeDelta: 11, longitudeDelta: 11))
     
     var body: some View {
-        NavigationView {
+        //NavigationView {
             Map(coordinateRegion: $coordinateRegion, annotationItems: playersStore.players.filter { $0.location != nil }) { player in
                 MapAnnotation(coordinate: player.location!) {
-                    NavigationLink(destination: PlayerDetails(player: player)) {
+                    NavigationLink(destination: PlayerDetails(viewModel: DependencyFactory.shared.getPlayerDetailsViewModel(), player: binding(for: player))) {
                         MapPlayerIcon(player: player)
                     }
                 }
             }
             .ignoresSafeArea(edges: .top)
-        }
+        //}
     }
     
+    private func binding(for player: Player) -> Binding<Player> {
+        let playerIndex = playersStore.players.firstIndex(where: { $0.id == player.id })!
+        return $playersStore.players[playerIndex]
+    }
 }
 
 struct MapView_Previews: PreviewProvider {

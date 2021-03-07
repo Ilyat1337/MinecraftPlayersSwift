@@ -82,9 +82,9 @@ class FirebaseMediaRepository: MediaRepository {
     }
     
     private func deleteMedia(direcoryRef: StorageReference, mediaId: String,
-                 completion: @escaping (Void?, Error?) -> Void) {
+                 completion: @escaping (String?, Error?) -> Void) {
         direcoryRef.child(mediaId).delete { error in
-            completion(nil, error)
+            completion("", error)
         }
     }
     
@@ -109,6 +109,10 @@ class FirebaseMediaRepository: MediaRepository {
     
     private func waitForAllTasks<TaskData, ReturnType>(directoryRef: StorageReference, tasksData: [TaskData],
                task: (StorageReference, TaskData, @escaping (ReturnType?, Error?) -> Void) -> Void, completion: @escaping ([ReturnType], Error?) -> Void) {
+        if tasksData.isEmpty {
+            completion([], nil)
+        }
+        
         var results = [ReturnType]()
         var taskCount = 0
         var isErrorOccured = false

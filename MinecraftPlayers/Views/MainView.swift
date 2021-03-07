@@ -9,29 +9,39 @@
 import SwiftUI
 
 struct MainView: View {
-    @State private var selectedTab = 1
+    @State private var selectedTab = 0
     @EnvironmentObject private var playersStore: PlayersStore
+    @EnvironmentObject private var settings: SettingsStore
     
     var body: some View {
-        TabView(selection: $selectedTab) {           
-            PlayerListView()
-                .tabItem {
-                    Label("List", systemImage: "person")
-                }.tag(0)
-
-            MapView()
-                .tabItem {
-                    Label("Map", systemImage: "map")
-                }.tag(1)
-            
-            SettingsView()
-                .tabItem {
-                    Label("Settings", systemImage: "gear")
-                }.tag(2)
-
-        }
-        .onAppear() {
-            playersStore.loadAllPlayers()
+        NavigationView {
+            TabView(selection: $selectedTab) {           
+                PlayerListView()
+                    .tabItem {
+                        Label("Players", systemImage: "person")
+                    }
+                    .tag(0)
+                    .navigationBarHidden(true)
+                
+                MapView()
+                    .tabItem {
+                        Label("Map", systemImage: "map")
+                    }
+                    .tag(1)
+                    .navigationBarHidden(true)
+                
+                SettingsView()
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }
+                    .tag(2)
+                    .navigationBarHidden(true)
+                
+            }
+            .ignoresSafeArea(edges: .bottom)
+            .onAppear() {
+                playersStore.loadAllPlayers()
+            }
         }
     }
 }

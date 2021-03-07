@@ -47,7 +47,7 @@ class FirebasePlayersService: PlayersService {
 
 class ArrayPlayersService: PlayersService {
     func loadAllPlayers(completion: @escaping ([Player], Error?) -> Void) {
-        let playersArray = Array(repeating: 0, count: 5).map { number in
+        var playersArray = Array(repeating: 0, count: 5).map { number in
             return getPlayerForPreview() }
         playersArray[0].location = CLLocationCoordinate2D(latitude: 53.89168, longitude: 27.54893)
         playersArray[1].location = CLLocationCoordinate2D(latitude: 52.63, longitude: 30.91)

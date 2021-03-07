@@ -26,6 +26,8 @@ struct ContentView: View {
         }
         .animation(.spring())
         .environment(\.colorScheme, settings.colorScheme)
+        .font(.custom(settings.fontName, size: settings.fontSize))
+        .accentColor(settings.color)
     }
 }
 

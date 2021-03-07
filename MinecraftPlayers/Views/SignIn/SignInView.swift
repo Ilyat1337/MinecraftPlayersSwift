@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct SignInView: View {
+    @EnvironmentObject private var settings: SettingsStore
     @ObservedObject var viewModel: SignInViewModel
     
     var body: some View {
@@ -19,7 +20,7 @@ struct SignInView: View {
                 VStack{
                     Text("Sign In")
                         .fontWeight(.heavy)
-                        .font(.largeTitle)
+                        .font(.custom(settings.fontName, size: settings.fontSize * 2))
                         .padding([.top,.bottom], 20)
                     
                     VStack(alignment: .leading) {
@@ -93,5 +94,6 @@ struct SignInView: View {
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
         SignInView(viewModel: DependencyFactory.shared.getSignInViewModel())
+            .environmentObject(getResetSettings())
     }
 }

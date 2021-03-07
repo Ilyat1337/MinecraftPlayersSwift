@@ -9,11 +9,13 @@
 import SwiftUI
 
 struct SettingsView: View {
+    private let fontNames = ["Helvetica", "Avenir Next", "Noteworthy", "Papyrus", "Chalkboard SE"]
+    
     @EnvironmentObject private var settings: SettingsStore
     @EnvironmentObject private var loggedUserStore: LoggedUserStore
     
     var body: some View {
-        NavigationView {
+        //NavigationView {
             Form {
                 Picker(
                     selection: $settings.locale,
@@ -23,16 +25,27 @@ struct SettingsView: View {
                     Text("Русский").tag("ru")
                 }
                 
-                ColorPicker("Color", selection: $settings.color)
-                
-                Toggle(isOn: $settings.isDarkMode) {
-                    Text("Dark mode")
+                Picker(
+                    selection: $settings.fontName,
+                    label: Text("Font size")
+                ) {
+                    ForEach(0..<fontNames.count) { index in
+                        Text(fontNames[index])
+                            .font(.custom(fontNames[index], size: CGFloat(settings.fontSize)))
+                            .tag(fontNames[index])
+                    }
                 }
                 
                 HStack {
                     Text("Font size")
                     Spacer(minLength: 40)
-                    Slider(value: $settings.fontSize, in: 6...40)
+                    Slider(value: $settings.fontSize, in: 10...25)
+                }
+                
+                ColorPicker("Color", selection: $settings.color)
+                
+                Toggle(isOn: $settings.isDarkMode) {
+                    Text("Dark mode")
                 }
                 
                 Button(action: {
@@ -55,7 +68,7 @@ struct SettingsView: View {
                 }
             }
             .navigationBarTitle(Text("Settings"))
-        }
+        //}
         //.environment(\.colorScheme, settings.colorScheme)
     }
 }

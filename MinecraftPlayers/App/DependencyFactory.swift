@@ -40,6 +40,11 @@ class DependencyFactory {
     }
     
     func getPlayersStore() -> PlayersStore {
-        return playersStore
+        //return playersStore
+        return getLoadedPlayersStore()
+    }
+    
+    func getPlayerDetailsViewModel() -> PlayerDetailsViewModel {
+        return PlayerDetailsViewModel(mediaRepository: mediaRepository)
     }
 }

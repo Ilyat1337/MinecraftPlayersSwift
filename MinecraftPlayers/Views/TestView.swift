@@ -7,55 +7,37 @@
 //
 
 import SwiftUI
-
-fileprivate struct DetailRow: View {
-    let leftLabel: Text
-    let rightLabe: Text
-    
-    var body: some View {
-        HStack {
-            leftLabel
-                .font(.headline)
-            Spacer()
-            rightLabe
-                .font(.callout)
-        }
-        .padding()
-        .frame(maxWidth: .infinity, maxHeight: 40, alignment: .leading)
-    }
-}
+import MapKit
 
 struct TestView: View {
-    let data = Array(1...5).map {"Item \($0)"}
-    private static let horizontalSpacing: CGFloat = 15.0
-    let layout = [
-        GridItem(.flexible(), spacing: horizontalSpacing),
-        GridItem(.flexible(), spacing: horizontalSpacing),
-        GridItem(.flexible(), spacing: horizontalSpacing)
-    ]
+    @State var coordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 53.89168, longitude: 27.54893), span: MKCoordinateSpan(latitudeDelta: 11, longitudeDelta: 11))
+    @State var isShowingLocationPicker = false
+    let fontNames = ["Helvetica", "Avenir Next", "Noteworthy", "Papyrus", "Chalkboard SE"]
     
-    @State var output: String = ""
-    @State var input: String = ""
-    @State var typing = false
-    @State var temp = ""
     var body: some View {
         VStack {
-            if !typing {
-                if !output.isEmpty {
-                    Text("You typed: \(output)")
-                }
-            } else if !input.isEmpty {
-                Text("You are typing: \(input)")
-            }
-            TextField("", text: $input, onEditingChanged: {
-                print("Is typing: \($0)")
-                self.typing = $0
-            }, onCommit: {
-                print("On commit")
-                self.output = self.input
-            })
-            TextField("Ok!", text: $temp)
-            .background(Color.green.opacity(0.2))
+            Button("Show!!", action: { isShowingLocationPicker.toggle() })
+            Text("\(coordinateRegion.center.latitude)")
+            Text("\(coordinateRegion.center.longitude)")
+            
+                Text("Hello world!")
+                Text("Hello world!")
+                    .font(.system(size: 17))
+                Text("Hello world!")
+                    .font(.custom("Helvetica", size: 17))
+            Text("Hello world!")
+                .font(.custom("Avenir Next", size: 17))
+            Text("Hello world!")
+                .font(.custom("Noteworthy", size: 17))
+            Text("Hello world!")
+                .font(.custom("Papyrus", size: 17))
+            Text("Hello world!")
+                .font(.custom("Chalkboard SE", size: 17))
+            
+            
+        }
+        .fullScreenCover(isPresented: $isShowingLocationPicker) {
+            LocationPicker(coordinateRegion: $coordinateRegion)
         }
     }
 }
