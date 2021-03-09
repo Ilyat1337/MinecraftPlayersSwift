@@ -3,436 +3,307 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		380C194C25E535AC00196437 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380C194B25E535AB00196437 /* ContentView.swift */; };
-		380C195125E5A4EB00196437 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380C195025E5A4EB00196437 /* SignUpView.swift */; };
-		382599BC25E7C29100B6747B /* AvatarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382599BB25E7C29100B6747B /* AvatarService.swift */; };
-		382599C125E7CCF700B6747B /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382599C025E7CCF700B6747B /* SignUpViewModel.swift */; };
-		38AB306F25EF92BF005E8637 /* LocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AB306E25EF92BF005E8637 /* LocationPicker.swift */; };
-		38AB308525F03319005E8637 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AB308425F03319005E8637 /* ImagePicker.swift */; };
-		38BE50F225ED012B009B1C05 /* LoadedMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE50F125ED012B009B1C05 /* LoadedMedia.swift */; };
-		38BE50FD25ED2E7E009B1C05 /* PlayersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE50FC25ED2E7E009B1C05 /* PlayersService.swift */; };
-		38D1BE2425E91D05000735B3 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D1BE2325E91D05000735B3 /* AuthenticationService.swift */; };
-		38D1BE2C25E9223D000735B3 /* LoggedUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D1BE2B25E9223D000735B3 /* LoggedUserStore.swift */; };
-		38D1BE3125E923D7000735B3 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D1BE3025E923D7000735B3 /* SignInViewModel.swift */; };
-		38D2B8C925E6911700F54783 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38D2B8C825E6911700F54783 /* GoogleService-Info.plist */; };
-		38D7FB8525DFC55B0039F513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FB8425DFC55B0039F513 /* AppDelegate.swift */; };
-		38D7FB8725DFC55B0039F513 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FB8625DFC55B0039F513 /* SceneDelegate.swift */; };
-		38D7FB8925DFC55B0039F513 /* PlayerListVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FB8825DFC55B0039F513 /* PlayerListVIew.swift */; };
-		38D7FB8B25DFC55F0039F513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D7FB8A25DFC55F0039F513 /* Assets.xcassets */; };
-		38D7FB8E25DFC55F0039F513 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D7FB8D25DFC55F0039F513 /* Preview Assets.xcassets */; };
-		38D7FB9125DFC55F0039F513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D7FB8F25DFC55F0039F513 /* LaunchScreen.storyboard */; };
-		38D7FB9C25DFC55F0039F513 /* MinecraftPlayersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FB9B25DFC55F0039F513 /* MinecraftPlayersTests.swift */; };
-		38D7FBA725DFC55F0039F513 /* MinecraftPlayersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FBA625DFC55F0039F513 /* MinecraftPlayersUITests.swift */; };
-		38D7FBB525DFD20E0039F513 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FBB425DFD20E0039F513 /* Player.swift */; };
-		38D7FBB925DFE7CF0039F513 /* PlayerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FBB825DFE7CF0039F513 /* PlayerDetails.swift */; };
-		38D7FBBB25DFE8740039F513 /* PlayerGridElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FBBA25DFE8740039F513 /* PlayerGridElement.swift */; };
-		38D7FBBD25DFF7FA0039F513 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7FBBC25DFF7FA0039F513 /* MainView.swift */; };
-		38DA816725E1A47E0082FD5D /* PlayersStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA816625E1A47E0082FD5D /* PlayersStore.swift */; };
-		38DA817425E1AAC00082FD5D /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA817325E1AAC00082FD5D /* TestView.swift */; };
-		38E0762025EA6C5C007899F9 /* DependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0761F25EA6C5C007899F9 /* DependencyFactory.swift */; };
-		38E0762825EAA035007899F9 /* MediaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0762725EAA035007899F9 /* MediaRepository.swift */; };
-		38E2B00425F2860E006E3B1F /* ImageWithText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E2B00325F2860E006E3B1F /* ImageWithText.swift */; };
-		38E5A7BB25F38EA100281148 /* ImageGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E5A7BA25F38EA100281148 /* ImageGallery.swift */; };
-		38E5A7C125F3D7B700281148 /* PlayerDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E5A7C025F3D7B700281148 /* PlayerDetailsViewModel.swift */; };
-		38EED69125E2CF440030ACFB /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EED69025E2CF440030ACFB /* MapView.swift */; };
-		38EED69925E2D3C20030ACFB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EED69825E2D3C20030ACFB /* SettingsView.swift */; };
-		38EED69E25E2D53C0030ACFB /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EED69D25E2D53C0030ACFB /* SettingsStore.swift */; };
-		38F1325025E939400031AADF /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1324F25E939400031AADF /* SignInView.swift */; };
-		38F1325D25E9648C0031AADF /* PlayersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1325C25E9648C0031AADF /* PlayersRepository.swift */; };
-		64FA793126CC3C6450CFDC3B /* Pods_MinecraftPlayersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F4A85B6C872831942EFB7A /* Pods_MinecraftPlayersTests.framework */; };
-		AF8D02ABE530C2ABD984A0D8 /* Pods_MinecraftPlayers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BAB997894821E33DADECD23 /* Pods_MinecraftPlayers.framework */; };
-		E58B986BA70C48C435EEFEF1 /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61BF92960DE934C0DC349AD /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework */; };
+		38182C5325F7B0BF00C5D02C /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 38182C5225F7B0BF00C5D02C /* FirebaseFirestoreSwift-Beta */; };
+		38182C5525F7B0BF00C5D02C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 38182C5425F7B0BF00C5D02C /* FirebaseStorage */; };
+		38182C5725F7B0BF00C5D02C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 38182C5625F7B0BF00C5D02C /* FirebaseAuth */; };
+		38182C5925F7B0BF00C5D02C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 38182C5825F7B0BF00C5D02C /* FirebaseFirestore */; };
+		38182C8C25F7B53B00C5D02C /* PlayersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C5D25F7B53900C5D02C /* PlayersRepository.swift */; };
+		38182C8D25F7B53B00C5D02C /* MediaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C5E25F7B53900C5D02C /* MediaRepository.swift */; };
+		38182C8E25F7B53B00C5D02C /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C6025F7B53900C5D02C /* AuthenticationService.swift */; };
+		38182C8F25F7B53B00C5D02C /* PlayersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C6125F7B53900C5D02C /* PlayersService.swift */; };
+		38182C9025F7B53B00C5D02C /* AvatarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C6225F7B53900C5D02C /* AvatarService.swift */; };
+		38182C9125F7B53B00C5D02C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C6425F7B53900C5D02C /* Player.swift */; };
+		38182C9225F7B53B00C5D02C /* LoadedMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C6525F7B53900C5D02C /* LoadedMedia.swift */; };
+		38182C9325F7B53B00C5D02C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38182C6725F7B53900C5D02C /* Preview Assets.xcassets */; };
+		38182C9425F7B53B00C5D02C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38182C6925F7B53A00C5D02C /* LaunchScreen.storyboard */; };
+		38182C9525F7B53B00C5D02C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C6C25F7B53A00C5D02C /* SettingsView.swift */; };
+		38182C9625F7B53B00C5D02C /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C6E25F7B53A00C5D02C /* SignUpViewModel.swift */; };
+		38182C9725F7B53B00C5D02C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C6F25F7B53A00C5D02C /* SignUpView.swift */; };
+		38182C9825F7B53B00C5D02C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C7025F7B53A00C5D02C /* MapView.swift */; };
+		38182C9925F7B53B00C5D02C /* PlayerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C7225F7B53A00C5D02C /* PlayerDetails.swift */; };
+		38182C9A25F7B53B00C5D02C /* PlayerDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C7325F7B53A00C5D02C /* PlayerDetailsViewModel.swift */; };
+		38182C9B25F7B53B00C5D02C /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C7425F7B53A00C5D02C /* TestView.swift */; };
+		38182C9C25F7B53B00C5D02C /* LocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C7625F7B53A00C5D02C /* LocationPicker.swift */; };
+		38182C9D25F7B53B00C5D02C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C7725F7B53A00C5D02C /* ImagePicker.swift */; };
+		38182C9E25F7B53B00C5D02C /* ImageWithText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C7925F7B53A00C5D02C /* ImageWithText.swift */; };
+		38182C9F25F7B53B00C5D02C /* ImageGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C7A25F7B53A00C5D02C /* ImageGallery.swift */; };
+		38182CA025F7B53B00C5D02C /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C7C25F7B53A00C5D02C /* SignInView.swift */; };
+		38182CA125F7B53B00C5D02C /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C7D25F7B53A00C5D02C /* SignInViewModel.swift */; };
+		38182CA225F7B53B00C5D02C /* PlayerListVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C7E25F7B53A00C5D02C /* PlayerListVIew.swift */; };
+		38182CA325F7B53B00C5D02C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C7F25F7B53A00C5D02C /* MainView.swift */; };
+		38182CA425F7B53B00C5D02C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C8025F7B53A00C5D02C /* ContentView.swift */; };
+		38182CA525F7B53B00C5D02C /* PlayerGridElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C8125F7B53A00C5D02C /* PlayerGridElement.swift */; };
+		38182CA625F7B53B00C5D02C /* PlayersStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C8325F7B53A00C5D02C /* PlayersStore.swift */; };
+		38182CA725F7B53B00C5D02C /* LoggedUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C8425F7B53A00C5D02C /* LoggedUserStore.swift */; };
+		38182CA825F7B53B00C5D02C /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C8525F7B53A00C5D02C /* SettingsStore.swift */; };
+		38182CA925F7B53B00C5D02C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38182C8625F7B53A00C5D02C /* Assets.xcassets */; };
+		38182CAB25F7B53B00C5D02C /* DependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C8925F7B53B00C5D02C /* DependencyFactory.swift */; };
+		38182CAC25F7B53B00C5D02C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C8A25F7B53B00C5D02C /* AppDelegate.swift */; };
+		38182CAD25F7B53B00C5D02C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C8B25F7B53B00C5D02C /* SceneDelegate.swift */; };
+		38182CB025F7B56C00C5D02C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38182CAF25F7B56B00C5D02C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		38D7FB9825DFC55F0039F513 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 38D7FB7925DFC55B0039F513 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 38D7FB8025DFC55B0039F513;
-			remoteInfo = MinecraftPlayers;
-		};
-		38D7FBA325DFC55F0039F513 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 38D7FB7925DFC55B0039F513 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 38D7FB8025DFC55B0039F513;
-			remoteInfo = MinecraftPlayers;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		315F99E64922AB7EE3603E1B /* Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig"; sourceTree = "<group>"; };
-		380C194B25E535AB00196437 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		380C195025E5A4EB00196437 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		382599BB25E7C29100B6747B /* AvatarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarService.swift; sourceTree = "<group>"; };
-		382599C025E7CCF700B6747B /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		38AB306E25EF92BF005E8637 /* LocationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPicker.swift; sourceTree = "<group>"; };
-		38AB308425F03319005E8637 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		38BE50F125ED012B009B1C05 /* LoadedMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadedMedia.swift; sourceTree = "<group>"; };
-		38BE50FC25ED2E7E009B1C05 /* PlayersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersService.swift; sourceTree = "<group>"; };
-		38D1BE2325E91D05000735B3 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
-		38D1BE2B25E9223D000735B3 /* LoggedUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedUserStore.swift; sourceTree = "<group>"; };
-		38D1BE3025E923D7000735B3 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
-		38D2B8C825E6911700F54783 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		38D7FB8125DFC55B0039F513 /* MinecraftPlayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinecraftPlayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		38D7FB8425DFC55B0039F513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		38D7FB8625DFC55B0039F513 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		38D7FB8825DFC55B0039F513 /* PlayerListVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListVIew.swift; sourceTree = "<group>"; };
-		38D7FB8A25DFC55F0039F513 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		38D7FB8D25DFC55F0039F513 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		38D7FB9025DFC55F0039F513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		38D7FB9225DFC55F0039F513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38D7FB9725DFC55F0039F513 /* MinecraftPlayersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinecraftPlayersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38D7FB9B25DFC55F0039F513 /* MinecraftPlayersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinecraftPlayersTests.swift; sourceTree = "<group>"; };
-		38D7FB9D25DFC55F0039F513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38D7FBA225DFC55F0039F513 /* MinecraftPlayersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinecraftPlayersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38D7FBA625DFC55F0039F513 /* MinecraftPlayersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinecraftPlayersUITests.swift; sourceTree = "<group>"; };
-		38D7FBA825DFC55F0039F513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38D7FBB425DFD20E0039F513 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		38D7FBB825DFE7CF0039F513 /* PlayerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetails.swift; sourceTree = "<group>"; };
-		38D7FBBA25DFE8740039F513 /* PlayerGridElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerGridElement.swift; sourceTree = "<group>"; };
-		38D7FBBC25DFF7FA0039F513 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		38DA816625E1A47E0082FD5D /* PlayersStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersStore.swift; sourceTree = "<group>"; };
-		38DA817325E1AAC00082FD5D /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
-		38E0761F25EA6C5C007899F9 /* DependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyFactory.swift; sourceTree = "<group>"; };
-		38E0762725EAA035007899F9 /* MediaRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaRepository.swift; sourceTree = "<group>"; };
-		38E2B00325F2860E006E3B1F /* ImageWithText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithText.swift; sourceTree = "<group>"; };
-		38E5A7BA25F38EA100281148 /* ImageGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGallery.swift; sourceTree = "<group>"; };
-		38E5A7C025F3D7B700281148 /* PlayerDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewModel.swift; sourceTree = "<group>"; };
-		38EED69025E2CF440030ACFB /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		38EED69825E2D3C20030ACFB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		38EED69D25E2D53C0030ACFB /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
-		38F1324F25E939400031AADF /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		38F1325C25E9648C0031AADF /* PlayersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersRepository.swift; sourceTree = "<group>"; };
-		4BAB997894821E33DADECD23 /* Pods_MinecraftPlayers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinecraftPlayers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6503EA7389947156519489A7 /* Pods-MinecraftPlayers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayers.debug.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayers/Pods-MinecraftPlayers.debug.xcconfig"; sourceTree = "<group>"; };
-		795785AFBBE54F5B58DB4F6B /* Pods-MinecraftPlayers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayers.release.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayers/Pods-MinecraftPlayers.release.xcconfig"; sourceTree = "<group>"; };
-		96B7668C7A76E6E8FC5AA0F3 /* Pods-MinecraftPlayersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayersTests.release.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayersTests/Pods-MinecraftPlayersTests.release.xcconfig"; sourceTree = "<group>"; };
-		AAA3793EB5774DA7AFEC019E /* Pods-MinecraftPlayersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayersTests.debug.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayersTests/Pods-MinecraftPlayersTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CD6A449EC0D07E7C021CA74E /* Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig"; path = "Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		D61BF92960DE934C0DC349AD /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinecraftPlayers_MinecraftPlayersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7F4A85B6C872831942EFB7A /* Pods_MinecraftPlayersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinecraftPlayersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38182C1F25F7AE9600C5D02C /* MinecraftPlayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinecraftPlayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38182C5D25F7B53900C5D02C /* PlayersRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersRepository.swift; sourceTree = "<group>"; };
+		38182C5E25F7B53900C5D02C /* MediaRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaRepository.swift; sourceTree = "<group>"; };
+		38182C6025F7B53900C5D02C /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		38182C6125F7B53900C5D02C /* PlayersService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersService.swift; sourceTree = "<group>"; };
+		38182C6225F7B53900C5D02C /* AvatarService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarService.swift; sourceTree = "<group>"; };
+		38182C6425F7B53900C5D02C /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		38182C6525F7B53900C5D02C /* LoadedMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadedMedia.swift; sourceTree = "<group>"; };
+		38182C6725F7B53900C5D02C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		38182C6A25F7B53A00C5D02C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		38182C6C25F7B53A00C5D02C /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		38182C6E25F7B53A00C5D02C /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		38182C6F25F7B53A00C5D02C /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		38182C7025F7B53A00C5D02C /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		38182C7225F7B53A00C5D02C /* PlayerDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetails.swift; sourceTree = "<group>"; };
+		38182C7325F7B53A00C5D02C /* PlayerDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewModel.swift; sourceTree = "<group>"; };
+		38182C7425F7B53A00C5D02C /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		38182C7625F7B53A00C5D02C /* LocationPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPicker.swift; sourceTree = "<group>"; };
+		38182C7725F7B53A00C5D02C /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		38182C7925F7B53A00C5D02C /* ImageWithText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageWithText.swift; sourceTree = "<group>"; };
+		38182C7A25F7B53A00C5D02C /* ImageGallery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGallery.swift; sourceTree = "<group>"; };
+		38182C7C25F7B53A00C5D02C /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		38182C7D25F7B53A00C5D02C /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		38182C7E25F7B53A00C5D02C /* PlayerListVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerListVIew.swift; sourceTree = "<group>"; };
+		38182C7F25F7B53A00C5D02C /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		38182C8025F7B53A00C5D02C /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		38182C8125F7B53A00C5D02C /* PlayerGridElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerGridElement.swift; sourceTree = "<group>"; };
+		38182C8325F7B53A00C5D02C /* PlayersStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersStore.swift; sourceTree = "<group>"; };
+		38182C8425F7B53A00C5D02C /* LoggedUserStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedUserStore.swift; sourceTree = "<group>"; };
+		38182C8525F7B53A00C5D02C /* SettingsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		38182C8625F7B53A00C5D02C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38182C8925F7B53B00C5D02C /* DependencyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyFactory.swift; sourceTree = "<group>"; };
+		38182C8A25F7B53B00C5D02C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		38182C8B25F7B53B00C5D02C /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		38182CAF25F7B56B00C5D02C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		38182CB625F7BE6B00C5D02C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MinecraftPlayers/Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		38D7FB7E25DFC55B0039F513 /* Frameworks */ = {
+		38182C1C25F7AE9600C5D02C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF8D02ABE530C2ABD984A0D8 /* Pods_MinecraftPlayers.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		38D7FB9425DFC55F0039F513 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				64FA793126CC3C6450CFDC3B /* Pods_MinecraftPlayersTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		38D7FB9F25DFC55F0039F513 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E58B986BA70C48C435EEFEF1 /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework in Frameworks */,
+				38182C5325F7B0BF00C5D02C /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				38182C5925F7B0BF00C5D02C /* FirebaseFirestore in Frameworks */,
+				38182C5725F7B0BF00C5D02C /* FirebaseAuth in Frameworks */,
+				38182C5525F7B0BF00C5D02C /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		38AB307325EFA8F9005E8637 /* Edit */ = {
+		38182C1625F7AE9600C5D02C = {
 			isa = PBXGroup;
 			children = (
-				38AB306E25EF92BF005E8637 /* LocationPicker.swift */,
-				38AB308425F03319005E8637 /* ImagePicker.swift */,
-			);
-			path = Edit;
-			sourceTree = "<group>";
-		};
-		38D7FB7825DFC55B0039F513 = {
-			isa = PBXGroup;
-			children = (
-				38D7FB8325DFC55B0039F513 /* MinecraftPlayers */,
-				38D7FB9A25DFC55F0039F513 /* MinecraftPlayersTests */,
-				38D7FBA525DFC55F0039F513 /* MinecraftPlayersUITests */,
-				38D7FB8225DFC55B0039F513 /* Products */,
-				438DECC48913D7B57E750CF5 /* Pods */,
-				C5D9F7383B38F44C19F9A4F3 /* Frameworks */,
+				38182C2125F7AE9600C5D02C /* MinecraftPlayers */,
+				38182CAF25F7B56B00C5D02C /* GoogleService-Info.plist */,
+				38182CB625F7BE6B00C5D02C /* Info.plist */,
+				38182C2025F7AE9600C5D02C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		38D7FB8225DFC55B0039F513 /* Products */ = {
+		38182C2025F7AE9600C5D02C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				38D7FB8125DFC55B0039F513 /* MinecraftPlayers.app */,
-				38D7FB9725DFC55F0039F513 /* MinecraftPlayersTests.xctest */,
-				38D7FBA225DFC55F0039F513 /* MinecraftPlayersUITests.xctest */,
+				38182C1F25F7AE9600C5D02C /* MinecraftPlayers.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		38D7FB8325DFC55B0039F513 /* MinecraftPlayers */ = {
+		38182C2125F7AE9600C5D02C /* MinecraftPlayers */ = {
 			isa = PBXGroup;
 			children = (
-				38E0761B25EA6AE3007899F9 /* App */,
-				38F1325825E95C7C0031AADF /* Services */,
-				38DA816F25E1A73E0082FD5D /* Repositories */,
-				38DA816525E1A41A0082FD5D /* Stores */,
-				38DA816425E1A3FA0082FD5D /* Models */,
-				38DA816025E1A21C0082FD5D /* Views */,
-				38D7FB8A25DFC55F0039F513 /* Assets.xcassets */,
-				38D7FB8F25DFC55F0039F513 /* LaunchScreen.storyboard */,
-				38D7FB9225DFC55F0039F513 /* Info.plist */,
-				38D2B8C825E6911700F54783 /* GoogleService-Info.plist */,
-				38D7FB8C25DFC55F0039F513 /* Preview Content */,
+				38182C8825F7B53B00C5D02C /* App */,
+				38182C8625F7B53A00C5D02C /* Assets.xcassets */,
+				38182C6825F7B53900C5D02C /* Base.lproj */,
+				38182C6325F7B53900C5D02C /* Models */,
+				38182C5C25F7B53900C5D02C /* Repositories */,
+				38182C5F25F7B53900C5D02C /* Services */,
+				38182C8225F7B53A00C5D02C /* Stores */,
+				38182C6B25F7B53A00C5D02C /* Views */,
+				38182C6625F7B53900C5D02C /* Preview Content */,
 			);
 			path = MinecraftPlayers;
 			sourceTree = "<group>";
 		};
-		38D7FB8C25DFC55F0039F513 /* Preview Content */ = {
+		38182C5C25F7B53900C5D02C /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				38D7FB8D25DFC55F0039F513 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		38D7FB9A25DFC55F0039F513 /* MinecraftPlayersTests */ = {
-			isa = PBXGroup;
-			children = (
-				38D7FB9B25DFC55F0039F513 /* MinecraftPlayersTests.swift */,
-				38D7FB9D25DFC55F0039F513 /* Info.plist */,
-			);
-			path = MinecraftPlayersTests;
-			sourceTree = "<group>";
-		};
-		38D7FBA525DFC55F0039F513 /* MinecraftPlayersUITests */ = {
-			isa = PBXGroup;
-			children = (
-				38D7FBA625DFC55F0039F513 /* MinecraftPlayersUITests.swift */,
-				38D7FBA825DFC55F0039F513 /* Info.plist */,
-			);
-			path = MinecraftPlayersUITests;
-			sourceTree = "<group>";
-		};
-		38DA816025E1A21C0082FD5D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				38E5A7BF25F3D76900281148 /* Details */,
-				38E2AFFF25F28534006E3B1F /* Components */,
-				38AB307325EFA8F9005E8637 /* Edit */,
-				38E0761725EA5AF9007899F9 /* SignUp */,
-				38F1325425E93C060031AADF /* SignIn */,
-				38D7FBBA25DFE8740039F513 /* PlayerGridElement.swift */,
-				38D7FB8825DFC55B0039F513 /* PlayerListVIew.swift */,
-				38D7FBBC25DFF7FA0039F513 /* MainView.swift */,
-				38DA817325E1AAC00082FD5D /* TestView.swift */,
-				38EED69025E2CF440030ACFB /* MapView.swift */,
-				38EED69825E2D3C20030ACFB /* SettingsView.swift */,
-				380C194B25E535AB00196437 /* ContentView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		38DA816425E1A3FA0082FD5D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				38D7FBB425DFD20E0039F513 /* Player.swift */,
-				38BE50F125ED012B009B1C05 /* LoadedMedia.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		38DA816525E1A41A0082FD5D /* Stores */ = {
-			isa = PBXGroup;
-			children = (
-				38DA816625E1A47E0082FD5D /* PlayersStore.swift */,
-				38EED69D25E2D53C0030ACFB /* SettingsStore.swift */,
-				38D1BE2B25E9223D000735B3 /* LoggedUserStore.swift */,
-			);
-			path = Stores;
-			sourceTree = "<group>";
-		};
-		38DA816F25E1A73E0082FD5D /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				38F1325C25E9648C0031AADF /* PlayersRepository.swift */,
-				38E0762725EAA035007899F9 /* MediaRepository.swift */,
+				38182C5D25F7B53900C5D02C /* PlayersRepository.swift */,
+				38182C5E25F7B53900C5D02C /* MediaRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
 		};
-		38E0761725EA5AF9007899F9 /* SignUp */ = {
+		38182C5F25F7B53900C5D02C /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				380C195025E5A4EB00196437 /* SignUpView.swift */,
-				382599C025E7CCF700B6747B /* SignUpViewModel.swift */,
-			);
-			path = SignUp;
-			sourceTree = "<group>";
-		};
-		38E0761B25EA6AE3007899F9 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				38D7FB8425DFC55B0039F513 /* AppDelegate.swift */,
-				38D7FB8625DFC55B0039F513 /* SceneDelegate.swift */,
-				38E0761F25EA6C5C007899F9 /* DependencyFactory.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
-		38E2AFFF25F28534006E3B1F /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				38E2B00325F2860E006E3B1F /* ImageWithText.swift */,
-				38E5A7BA25F38EA100281148 /* ImageGallery.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		38E5A7BF25F3D76900281148 /* Details */ = {
-			isa = PBXGroup;
-			children = (
-				38D7FBB825DFE7CF0039F513 /* PlayerDetails.swift */,
-				38E5A7C025F3D7B700281148 /* PlayerDetailsViewModel.swift */,
-			);
-			path = Details;
-			sourceTree = "<group>";
-		};
-		38F1325425E93C060031AADF /* SignIn */ = {
-			isa = PBXGroup;
-			children = (
-				38F1324F25E939400031AADF /* SignInView.swift */,
-				38D1BE3025E923D7000735B3 /* SignInViewModel.swift */,
-			);
-			path = SignIn;
-			sourceTree = "<group>";
-		};
-		38F1325825E95C7C0031AADF /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				382599BB25E7C29100B6747B /* AvatarService.swift */,
-				38D1BE2325E91D05000735B3 /* AuthenticationService.swift */,
-				38BE50FC25ED2E7E009B1C05 /* PlayersService.swift */,
+				38182C6025F7B53900C5D02C /* AuthenticationService.swift */,
+				38182C6125F7B53900C5D02C /* PlayersService.swift */,
+				38182C6225F7B53900C5D02C /* AvatarService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		438DECC48913D7B57E750CF5 /* Pods */ = {
+		38182C6325F7B53900C5D02C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6503EA7389947156519489A7 /* Pods-MinecraftPlayers.debug.xcconfig */,
-				795785AFBBE54F5B58DB4F6B /* Pods-MinecraftPlayers.release.xcconfig */,
-				CD6A449EC0D07E7C021CA74E /* Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig */,
-				315F99E64922AB7EE3603E1B /* Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig */,
-				AAA3793EB5774DA7AFEC019E /* Pods-MinecraftPlayersTests.debug.xcconfig */,
-				96B7668C7A76E6E8FC5AA0F3 /* Pods-MinecraftPlayersTests.release.xcconfig */,
+				38182C6425F7B53900C5D02C /* Player.swift */,
+				38182C6525F7B53900C5D02C /* LoadedMedia.swift */,
 			);
-			path = Pods;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		C5D9F7383B38F44C19F9A4F3 /* Frameworks */ = {
+		38182C6625F7B53900C5D02C /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				4BAB997894821E33DADECD23 /* Pods_MinecraftPlayers.framework */,
-				D61BF92960DE934C0DC349AD /* Pods_MinecraftPlayers_MinecraftPlayersUITests.framework */,
-				D7F4A85B6C872831942EFB7A /* Pods_MinecraftPlayersTests.framework */,
+				38182C6725F7B53900C5D02C /* Preview Assets.xcassets */,
 			);
-			name = Frameworks;
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		38182C6825F7B53900C5D02C /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				38182C6925F7B53A00C5D02C /* LaunchScreen.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		38182C6B25F7B53A00C5D02C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38182C7825F7B53A00C5D02C /* Components */,
+				38182C7B25F7B53A00C5D02C /* SignIn */,
+				38182C6D25F7B53A00C5D02C /* SignUp */,
+				38182C7125F7B53A00C5D02C /* Details */,
+				38182C7525F7B53A00C5D02C /* Edit */,
+				38182C6C25F7B53A00C5D02C /* SettingsView.swift */,
+				38182C7025F7B53A00C5D02C /* MapView.swift */,
+				38182C7425F7B53A00C5D02C /* TestView.swift */,
+				38182C8025F7B53A00C5D02C /* ContentView.swift */,
+				38182C7E25F7B53A00C5D02C /* PlayerListVIew.swift */,
+				38182C7F25F7B53A00C5D02C /* MainView.swift */,
+				38182C8125F7B53A00C5D02C /* PlayerGridElement.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		38182C6D25F7B53A00C5D02C /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				38182C6E25F7B53A00C5D02C /* SignUpViewModel.swift */,
+				38182C6F25F7B53A00C5D02C /* SignUpView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		38182C7125F7B53A00C5D02C /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				38182C7225F7B53A00C5D02C /* PlayerDetails.swift */,
+				38182C7325F7B53A00C5D02C /* PlayerDetailsViewModel.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		38182C7525F7B53A00C5D02C /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				38182C7625F7B53A00C5D02C /* LocationPicker.swift */,
+				38182C7725F7B53A00C5D02C /* ImagePicker.swift */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		38182C7825F7B53A00C5D02C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				38182C7925F7B53A00C5D02C /* ImageWithText.swift */,
+				38182C7A25F7B53A00C5D02C /* ImageGallery.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		38182C7B25F7B53A00C5D02C /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				38182C7C25F7B53A00C5D02C /* SignInView.swift */,
+				38182C7D25F7B53A00C5D02C /* SignInViewModel.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		38182C8225F7B53A00C5D02C /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				38182C8325F7B53A00C5D02C /* PlayersStore.swift */,
+				38182C8425F7B53A00C5D02C /* LoggedUserStore.swift */,
+				38182C8525F7B53A00C5D02C /* SettingsStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		38182C8825F7B53B00C5D02C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				38182C8925F7B53B00C5D02C /* DependencyFactory.swift */,
+				38182C8A25F7B53B00C5D02C /* AppDelegate.swift */,
+				38182C8B25F7B53B00C5D02C /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		38D7FB8025DFC55B0039F513 /* MinecraftPlayers */ = {
+		38182C1E25F7AE9600C5D02C /* MinecraftPlayers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38D7FBAB25DFC55F0039F513 /* Build configuration list for PBXNativeTarget "MinecraftPlayers" */;
+			buildConfigurationList = 38182C3325F7AEB200C5D02C /* Build configuration list for PBXNativeTarget "MinecraftPlayers" */;
 			buildPhases = (
-				5C4E0AE7BFB7FA466D03A6BB /* [CP] Check Pods Manifest.lock */,
-				38D7FB7D25DFC55B0039F513 /* Sources */,
-				38D7FB7E25DFC55B0039F513 /* Frameworks */,
-				38D7FB7F25DFC55B0039F513 /* Resources */,
-				C5C296C6794240BEB9D30840 /* [CP] Embed Pods Frameworks */,
+				38182C1B25F7AE9600C5D02C /* Sources */,
+				38182C1C25F7AE9600C5D02C /* Frameworks */,
+				38182C1D25F7AE9600C5D02C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MinecraftPlayers;
+			packageProductDependencies = (
+				38182C5225F7B0BF00C5D02C /* FirebaseFirestoreSwift-Beta */,
+				38182C5425F7B0BF00C5D02C /* FirebaseStorage */,
+				38182C5625F7B0BF00C5D02C /* FirebaseAuth */,
+				38182C5825F7B0BF00C5D02C /* FirebaseFirestore */,
+			);
 			productName = MinecraftPlayers;
-			productReference = 38D7FB8125DFC55B0039F513 /* MinecraftPlayers.app */;
+			productReference = 38182C1F25F7AE9600C5D02C /* MinecraftPlayers.app */;
 			productType = "com.apple.product-type.application";
-		};
-		38D7FB9625DFC55F0039F513 /* MinecraftPlayersTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 38D7FBAE25DFC55F0039F513 /* Build configuration list for PBXNativeTarget "MinecraftPlayersTests" */;
-			buildPhases = (
-				946D5054E3CD6E77D07D6DB3 /* [CP] Check Pods Manifest.lock */,
-				38D7FB9325DFC55F0039F513 /* Sources */,
-				38D7FB9425DFC55F0039F513 /* Frameworks */,
-				38D7FB9525DFC55F0039F513 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				38D7FB9925DFC55F0039F513 /* PBXTargetDependency */,
-			);
-			name = MinecraftPlayersTests;
-			productName = MinecraftPlayersTests;
-			productReference = 38D7FB9725DFC55F0039F513 /* MinecraftPlayersTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		38D7FBA125DFC55F0039F513 /* MinecraftPlayersUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 38D7FBB125DFC55F0039F513 /* Build configuration list for PBXNativeTarget "MinecraftPlayersUITests" */;
-			buildPhases = (
-				DB469FAC7736A09AD1300212 /* [CP] Check Pods Manifest.lock */,
-				38D7FB9E25DFC55F0039F513 /* Sources */,
-				38D7FB9F25DFC55F0039F513 /* Frameworks */,
-				38D7FBA025DFC55F0039F513 /* Resources */,
-				BF8EF058577B68EF95F22EFB /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				38D7FBA425DFC55F0039F513 /* PBXTargetDependency */,
-			);
-			name = MinecraftPlayersUITests;
-			productName = MinecraftPlayersUITests;
-			productReference = 38D7FBA225DFC55F0039F513 /* MinecraftPlayersUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		38D7FB7925DFC55B0039F513 /* Project object */ = {
+		38182C1725F7AE9600C5D02C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
-				ORGANIZATIONNAME = Ilyat;
 				TargetAttributes = {
-					38D7FB8025DFC55B0039F513 = {
-						CreatedOnToolsVersion = 11.3;
-					};
-					38D7FB9625DFC55F0039F513 = {
-						CreatedOnToolsVersion = 11.3;
-						TestTargetID = 38D7FB8025DFC55B0039F513;
-					};
-					38D7FBA125DFC55F0039F513 = {
-						CreatedOnToolsVersion = 11.3;
-						TestTargetID = 38D7FB8025DFC55B0039F513;
+					38182C1E25F7AE9600C5D02C = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = 38D7FB7C25DFC55B0039F513 /* Build configuration list for PBXProject "MinecraftPlayers" */;
+			buildConfigurationList = 38182C1A25F7AE9600C5D02C /* Build configuration list for PBXProject "MinecraftPlayers" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -440,223 +311,78 @@
 				en,
 				Base,
 			);
-			mainGroup = 38D7FB7825DFC55B0039F513;
-			productRefGroup = 38D7FB8225DFC55B0039F513 /* Products */;
+			mainGroup = 38182C1625F7AE9600C5D02C;
+			packageReferences = (
+				38182C5125F7B0BF00C5D02C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 38182C2025F7AE9600C5D02C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				38D7FB8025DFC55B0039F513 /* MinecraftPlayers */,
-				38D7FB9625DFC55F0039F513 /* MinecraftPlayersTests */,
-				38D7FBA125DFC55F0039F513 /* MinecraftPlayersUITests */,
+				38182C1E25F7AE9600C5D02C /* MinecraftPlayers */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		38D7FB7F25DFC55B0039F513 /* Resources */ = {
+		38182C1D25F7AE9600C5D02C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38D7FB9125DFC55F0039F513 /* LaunchScreen.storyboard in Resources */,
-				38D2B8C925E6911700F54783 /* GoogleService-Info.plist in Resources */,
-				38D7FB8E25DFC55F0039F513 /* Preview Assets.xcassets in Resources */,
-				38D7FB8B25DFC55F0039F513 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		38D7FB9525DFC55F0039F513 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		38D7FBA025DFC55F0039F513 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				38182C9325F7B53B00C5D02C /* Preview Assets.xcassets in Resources */,
+				38182CB025F7B56C00C5D02C /* GoogleService-Info.plist in Resources */,
+				38182CA925F7B53B00C5D02C /* Assets.xcassets in Resources */,
+				38182C9425F7B53B00C5D02C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		5C4E0AE7BFB7FA466D03A6BB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MinecraftPlayers-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		946D5054E3CD6E77D07D6DB3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MinecraftPlayersTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BF8EF058577B68EF95F22EFB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers-MinecraftPlayersUITests/Pods-MinecraftPlayers-MinecraftPlayersUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C5C296C6794240BEB9D30840 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers/Pods-MinecraftPlayers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers/Pods-MinecraftPlayers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MinecraftPlayers/Pods-MinecraftPlayers-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DB469FAC7736A09AD1300212 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MinecraftPlayers-MinecraftPlayersUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		38D7FB7D25DFC55B0039F513 /* Sources */ = {
+		38182C1B25F7AE9600C5D02C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38D7FBB525DFD20E0039F513 /* Player.swift in Sources */,
-				382599C125E7CCF700B6747B /* SignUpViewModel.swift in Sources */,
-				380C195125E5A4EB00196437 /* SignUpView.swift in Sources */,
-				38D1BE2425E91D05000735B3 /* AuthenticationService.swift in Sources */,
-				38D1BE3125E923D7000735B3 /* SignInViewModel.swift in Sources */,
-				38D7FBBD25DFF7FA0039F513 /* MainView.swift in Sources */,
-				38E2B00425F2860E006E3B1F /* ImageWithText.swift in Sources */,
-				38AB306F25EF92BF005E8637 /* LocationPicker.swift in Sources */,
-				38E0762825EAA035007899F9 /* MediaRepository.swift in Sources */,
-				380C194C25E535AC00196437 /* ContentView.swift in Sources */,
-				38BE50FD25ED2E7E009B1C05 /* PlayersService.swift in Sources */,
-				38D7FB8525DFC55B0039F513 /* AppDelegate.swift in Sources */,
-				38EED69E25E2D53C0030ACFB /* SettingsStore.swift in Sources */,
-				38EED69125E2CF440030ACFB /* MapView.swift in Sources */,
-				38D7FB8725DFC55B0039F513 /* SceneDelegate.swift in Sources */,
-				38D7FB8925DFC55B0039F513 /* PlayerListVIew.swift in Sources */,
-				38DA816725E1A47E0082FD5D /* PlayersStore.swift in Sources */,
-				38DA817425E1AAC00082FD5D /* TestView.swift in Sources */,
-				38AB308525F03319005E8637 /* ImagePicker.swift in Sources */,
-				38D7FBB925DFE7CF0039F513 /* PlayerDetails.swift in Sources */,
-				38E0762025EA6C5C007899F9 /* DependencyFactory.swift in Sources */,
-				38F1325025E939400031AADF /* SignInView.swift in Sources */,
-				38E5A7C125F3D7B700281148 /* PlayerDetailsViewModel.swift in Sources */,
-				38E5A7BB25F38EA100281148 /* ImageGallery.swift in Sources */,
-				38EED69925E2D3C20030ACFB /* SettingsView.swift in Sources */,
-				38F1325D25E9648C0031AADF /* PlayersRepository.swift in Sources */,
-				382599BC25E7C29100B6747B /* AvatarService.swift in Sources */,
-				38D1BE2C25E9223D000735B3 /* LoggedUserStore.swift in Sources */,
-				38BE50F225ED012B009B1C05 /* LoadedMedia.swift in Sources */,
-				38D7FBBB25DFE8740039F513 /* PlayerGridElement.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		38D7FB9325DFC55F0039F513 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				38D7FB9C25DFC55F0039F513 /* MinecraftPlayersTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		38D7FB9E25DFC55F0039F513 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				38D7FBA725DFC55F0039F513 /* MinecraftPlayersUITests.swift in Sources */,
+				38182CA625F7B53B00C5D02C /* PlayersStore.swift in Sources */,
+				38182C9F25F7B53B00C5D02C /* ImageGallery.swift in Sources */,
+				38182C9B25F7B53B00C5D02C /* TestView.swift in Sources */,
+				38182C9225F7B53B00C5D02C /* LoadedMedia.swift in Sources */,
+				38182CAC25F7B53B00C5D02C /* AppDelegate.swift in Sources */,
+				38182CAD25F7B53B00C5D02C /* SceneDelegate.swift in Sources */,
+				38182C9525F7B53B00C5D02C /* SettingsView.swift in Sources */,
+				38182CAB25F7B53B00C5D02C /* DependencyFactory.swift in Sources */,
+				38182CA125F7B53B00C5D02C /* SignInViewModel.swift in Sources */,
+				38182CA725F7B53B00C5D02C /* LoggedUserStore.swift in Sources */,
+				38182C8F25F7B53B00C5D02C /* PlayersService.swift in Sources */,
+				38182C9825F7B53B00C5D02C /* MapView.swift in Sources */,
+				38182CA325F7B53B00C5D02C /* MainView.swift in Sources */,
+				38182C8E25F7B53B00C5D02C /* AuthenticationService.swift in Sources */,
+				38182C9925F7B53B00C5D02C /* PlayerDetails.swift in Sources */,
+				38182C9E25F7B53B00C5D02C /* ImageWithText.swift in Sources */,
+				38182C9625F7B53B00C5D02C /* SignUpViewModel.swift in Sources */,
+				38182CA025F7B53B00C5D02C /* SignInView.swift in Sources */,
+				38182C8D25F7B53B00C5D02C /* MediaRepository.swift in Sources */,
+				38182C9A25F7B53B00C5D02C /* PlayerDetailsViewModel.swift in Sources */,
+				38182C9725F7B53B00C5D02C /* SignUpView.swift in Sources */,
+				38182C9C25F7B53B00C5D02C /* LocationPicker.swift in Sources */,
+				38182CA425F7B53B00C5D02C /* ContentView.swift in Sources */,
+				38182CA225F7B53B00C5D02C /* PlayerListVIew.swift in Sources */,
+				38182C8C25F7B53B00C5D02C /* PlayersRepository.swift in Sources */,
+				38182CA825F7B53B00C5D02C /* SettingsStore.swift in Sources */,
+				38182C9D25F7B53B00C5D02C /* ImagePicker.swift in Sources */,
+				38182C9125F7B53B00C5D02C /* Player.swift in Sources */,
+				38182C9025F7B53B00C5D02C /* AvatarService.swift in Sources */,
+				38182CA525F7B53B00C5D02C /* PlayerGridElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		38D7FB9925DFC55F0039F513 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 38D7FB8025DFC55B0039F513 /* MinecraftPlayers */;
-			targetProxy = 38D7FB9825DFC55F0039F513 /* PBXContainerItemProxy */;
-		};
-		38D7FBA425DFC55F0039F513 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 38D7FB8025DFC55B0039F513 /* MinecraftPlayers */;
-			targetProxy = 38D7FBA325DFC55F0039F513 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		38D7FB8F25DFC55F0039F513 /* LaunchScreen.storyboard */ = {
+		38182C6925F7B53A00C5D02C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				38D7FB9025DFC55F0039F513 /* Base */,
+				38182C6A25F7B53A00C5D02C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -664,7 +390,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		38D7FBA925DFC55F0039F513 /* Debug */ = {
+		38182C3125F7AEB200C5D02C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -715,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -725,7 +451,7 @@
 			};
 			name = Debug;
 		};
-		38D7FBAA25DFC55F0039F513 /* Release */ = {
+		38182C3225F7AEB200C5D02C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -770,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -780,16 +506,15 @@
 			};
 			name = Release;
 		};
-		38D7FBAC25DFC55F0039F513 /* Debug */ = {
+		38182C3425F7AEB200C5D02C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6503EA7389947156519489A7 /* Pods-MinecraftPlayers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MinecraftPlayers/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MinecraftPlayers/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -801,16 +526,15 @@
 			};
 			name = Debug;
 		};
-		38D7FBAD25DFC55F0039F513 /* Release */ = {
+		38182C3525F7AEB200C5D02C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 795785AFBBE54F5B58DB4F6B /* Pods-MinecraftPlayers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MinecraftPlayers/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MinecraftPlayers/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -819,133 +543,65 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		38D7FBAF25DFC55F0039F513 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AAA3793EB5774DA7AFEC019E /* Pods-MinecraftPlayersTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MinecraftPlayersTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ilyat.MinecraftPlayersTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MinecraftPlayers.app/MinecraftPlayers";
-			};
-			name = Debug;
-		};
-		38D7FBB025DFC55F0039F513 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96B7668C7A76E6E8FC5AA0F3 /* Pods-MinecraftPlayersTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MinecraftPlayersTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ilyat.MinecraftPlayersTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MinecraftPlayers.app/MinecraftPlayers";
-			};
-			name = Release;
-		};
-		38D7FBB225DFC55F0039F513 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD6A449EC0D07E7C021CA74E /* Pods-MinecraftPlayers-MinecraftPlayersUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MinecraftPlayersUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ilyat.MinecraftPlayersUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MinecraftPlayers;
-			};
-			name = Debug;
-		};
-		38D7FBB325DFC55F0039F513 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 315F99E64922AB7EE3603E1B /* Pods-MinecraftPlayers-MinecraftPlayersUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MinecraftPlayersUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ilyat.MinecraftPlayersUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MinecraftPlayers;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		38D7FB7C25DFC55B0039F513 /* Build configuration list for PBXProject "MinecraftPlayers" */ = {
+		38182C1A25F7AE9600C5D02C /* Build configuration list for PBXProject "MinecraftPlayers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				38D7FBA925DFC55F0039F513 /* Debug */,
-				38D7FBAA25DFC55F0039F513 /* Release */,
+				38182C3125F7AEB200C5D02C /* Debug */,
+				38182C3225F7AEB200C5D02C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		38D7FBAB25DFC55F0039F513 /* Build configuration list for PBXNativeTarget "MinecraftPlayers" */ = {
+		38182C3325F7AEB200C5D02C /* Build configuration list for PBXNativeTarget "MinecraftPlayers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				38D7FBAC25DFC55F0039F513 /* Debug */,
-				38D7FBAD25DFC55F0039F513 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		38D7FBAE25DFC55F0039F513 /* Build configuration list for PBXNativeTarget "MinecraftPlayersTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				38D7FBAF25DFC55F0039F513 /* Debug */,
-				38D7FBB025DFC55F0039F513 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		38D7FBB125DFC55F0039F513 /* Build configuration list for PBXNativeTarget "MinecraftPlayersUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				38D7FBB225DFC55F0039F513 /* Debug */,
-				38D7FBB325DFC55F0039F513 /* Release */,
+				38182C3425F7AEB200C5D02C /* Debug */,
+				38182C3525F7AEB200C5D02C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		38182C5125F7B0BF00C5D02C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		38182C5225F7B0BF00C5D02C /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38182C5125F7B0BF00C5D02C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		38182C5425F7B0BF00C5D02C /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38182C5125F7B0BF00C5D02C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		38182C5625F7B0BF00C5D02C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38182C5125F7B0BF00C5D02C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		38182C5825F7B0BF00C5D02C /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38182C5125F7B0BF00C5D02C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 38D7FB7925DFC55B0039F513 /* Project object */;
+	rootObject = 38182C1725F7AE9600C5D02C /* Project object */;
 }
