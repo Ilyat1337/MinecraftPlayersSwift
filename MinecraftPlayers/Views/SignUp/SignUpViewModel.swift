@@ -26,7 +26,7 @@ class SignUpViewModel: ObservableObject {
     
     @Published var nickname: String = ""
     @Published var occupation: Player.OccupationType = Player.OccupationType.survival
-    @Published var favouriteMob: Player.MobType = Player.MobType.zombie
+    @Published var favouriteMob: Player.MobType = Player.MobType.creeper
     
     @Published var favouriteServerAddress: String = ""
     @Published var privilege: Player.PrivilegeType = Player.PrivilegeType.player

@@ -10,10 +10,10 @@ import SwiftUI
 import AVKit
 
 fileprivate struct DetailRow<T>: View where T: View {
-    var leftText: String
+    var leftText: LocalizedStringKey
     var rightView: T
     
-    init(_ leftText: String, _ rightView: T) {
+    init(_ leftText: LocalizedStringKey, _ rightView: T) {
         self.leftText = leftText
         self.rightView = rightView
     }

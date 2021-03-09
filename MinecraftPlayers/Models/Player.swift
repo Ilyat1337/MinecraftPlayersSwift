@@ -38,6 +38,8 @@ struct Player: Identifiable, Codable {
         case spider = "Spider"
         case enderman = "Enderman"
         case blaze = "Blaze"
+        case slime = "Slime"
+        case magmaCube = "Magma cube"
     }
     
     private enum CodingKeys: String, CodingKey {

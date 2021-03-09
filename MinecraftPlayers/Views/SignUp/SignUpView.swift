@@ -71,7 +71,7 @@ struct SignUpView: View {
                         .autocapitalization(.none)
                     Picker(selection: $viewModel.privilege, label: Text("Privilege")) {
                         ForEach(Player.PrivilegeType.allCases, id: \.self) {
-                            Text($0.rawValue)
+                            Text(LocalizedStringKey($0.rawValue))
                         }
                     }
                 }

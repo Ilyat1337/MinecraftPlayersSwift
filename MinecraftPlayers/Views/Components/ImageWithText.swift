@@ -23,7 +23,7 @@ struct ImageWithText: View {
                 .resizable()
                 .interpolation(.none)
                 .frame(width: 16, height: 16)
-            Text(text)
+            Text(LocalizedStringKey(text))
         }
     }
 }

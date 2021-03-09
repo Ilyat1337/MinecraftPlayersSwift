@@ -45,6 +45,7 @@
 		38182CAC25F7B53B00C5D02C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C8A25F7B53B00C5D02C /* AppDelegate.swift */; };
 		38182CAD25F7B53B00C5D02C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C8B25F7B53B00C5D02C /* SceneDelegate.swift */; };
 		38182CB025F7B56C00C5D02C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38182CAF25F7B56B00C5D02C /* GoogleService-Info.plist */; };
+		38182CBD25F7CB0200C5D02C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38182CBF25F7CB0200C5D02C /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,8 @@
 		38182C8B25F7B53B00C5D02C /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		38182CAF25F7B56B00C5D02C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		38182CB625F7BE6B00C5D02C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MinecraftPlayers/Info.plist; sourceTree = "<group>"; };
+		38182CBE25F7CB0200C5D02C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		38182CC125F7CB2900C5D02C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,7 @@
 				38182C8225F7B53A00C5D02C /* Stores */,
 				38182C6B25F7B53A00C5D02C /* Views */,
 				38182C6625F7B53900C5D02C /* Preview Content */,
+				38182CBF25F7CB0200C5D02C /* Localizable.strings */,
 			);
 			path = MinecraftPlayers;
 			sourceTree = "<group>";
@@ -310,6 +314,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 38182C1625F7AE9600C5D02C;
 			packageReferences = (
@@ -329,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38182CBD25F7CB0200C5D02C /* Localizable.strings in Resources */,
 				38182C9325F7B53B00C5D02C /* Preview Assets.xcassets in Resources */,
 				38182CB025F7B56C00C5D02C /* GoogleService-Info.plist in Resources */,
 				38182CA925F7B53B00C5D02C /* Assets.xcassets in Resources */,
@@ -387,6 +393,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		38182CBF25F7CB0200C5D02C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38182CBE25F7CB0200C5D02C /* en */,
+				38182CC125F7CB2900C5D02C /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -394,6 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -455,6 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

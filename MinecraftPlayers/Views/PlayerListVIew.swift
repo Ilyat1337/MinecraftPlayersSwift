@@ -11,27 +11,23 @@ import SwiftUI
 struct PlayerListView: View {
     let layout = Array(repeating: GridItem(.flexible(), spacing: 15), count: 2)
     
-    @State private var tabBar: UITabBar! = nil
     @EnvironmentObject private var settings: SettingsStore
     @EnvironmentObject private var playersStore: PlayersStore
     
     var body: some View {
-        //NavigationView {
-            ScrollView {
-                LazyVGrid(columns: layout, spacing: 20) {
-                    ForEach(0..<playersStore.players.count) { index in
-                        NavigationLink(destination: PlayerDetails(viewModel: DependencyFactory.shared.getPlayerDetailsViewModel(), player: $playersStore.players[index])) {
-                            PlayerGridElement(player: playersStore.players[index])
-                                .accentColor(settings.isDarkMode ? .white : .black)
-                        }                     
+        ScrollView {
+            LazyVGrid(columns: layout, spacing: 20) {
+                ForEach(0..<playersStore.players.count) { index in
+                    NavigationLink(destination: PlayerDetails(viewModel: DependencyFactory.shared.getPlayerDetailsViewModel(), player: $playersStore.players[index])) {
+                        PlayerGridElement(player: playersStore.players[index])
+                            .accentColor(settings.isDarkMode ? .white : .black)
                     }
                 }
-                .padding(.horizontal)
             }
-            .navigationBarTitle(Text("Players"))
-            .padding(.top, 0.3)
-        //}
-        
+            .padding(.horizontal)
+        }
+        .navigationBarTitle(Text("Players"))
+        .padding(.top, 0.3)
     }
 }
 

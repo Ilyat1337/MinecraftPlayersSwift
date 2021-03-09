@@ -1,0 +1,66 @@
+/* 
+  Localizable.strings
+  MinecraftPlayers
+
+  Created by Ilyat on 3/9/21.
+  
+*/
+
+"Sign In" = "Войти";
+"Email address" = "Почтовый адрес";
+"Enter Your Email address" = "Введите Ваш почтовый адрес";
+"Password" = "Пароль";
+"Enter Your Password" = "Введите Ваш пароль";
+"Don't Have An Account?" = "У Вас нет аккаунта?";
+"Sign Up" = "Зарегистрироваться";
+"Error" = "Ошибка";
+"Ok" = "Хорошо";
+"Credentials" = "Регистрационные данные";
+"Ingame" = "В игре";
+"Nickname" = "Никнейм";
+"Occupation" = "Род занятий";
+"Favourite mob" = "Любимый моб";
+"Favourite server" = "Любимый сервер";
+"Server address" = "Адрес сервера";
+"Privilege" = "Привилегия";
+"Real world" = "В реальном мире";
+"Name" = "Имя";
+"Country" = "Страна";
+"City" = "Город";
+"Age" = "Возраст";
+"Location" = "Местоположение";
+"Latitude" = "Широта";
+"Longitude" = "Долгота";
+"Images" = "Галерея";
+"View all" = "Все";
+"Video" = "Видео";
+"Edit" = "Изменить";
+"Language" = "Язык";
+"Font name" = "Название шрифта";
+"Font size (%lld pt)" = "Размер (%lld пт)";
+"Color" = "Цвет";
+"Dark mode" = "Темная тема";
+"Reset settings" = "Сбросить настройки";
+"Log out" = "Выйти";
+"Players" = "Игроки";
+"Map" = "Карта";
+"Settings" = "Настройки";
+"%lld y.o." = "%lld лет";
+"Survival" = "Выживание";
+"Redstone" = "Механизмы";
+"Building" = "Строительство";
+"PvP" = "PvP";
+"Map art" = "Арты";
+"Speedrun" = "Спидран";
+"Hardcore" = "Хардкор";
+"Player" = "Игрок";
+"Moderator" = "Модератор";
+"Admin" = "Администратор";
+"Creeper" = "Крипер";
+"Zombie" = "Зомби";
+"Skeleton" = "Скелет";
+"Spider" = "Паук";
+"Enderman" = "Странник Края";
+"Blaze" = "Ифрит";
+"Slime" = "Слизень";
+"Magma cube" = "Лавовый куб";

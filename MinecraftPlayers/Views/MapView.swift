@@ -34,16 +34,14 @@ struct MapView: View {
     @State private var coordinateRegion: MKCoordinateRegion = MKCoordinateRegion(center: centerCoordinates, span: MKCoordinateSpan(latitudeDelta: 11, longitudeDelta: 11))
     
     var body: some View {
-        //NavigationView {
-            Map(coordinateRegion: $coordinateRegion, annotationItems: playersStore.players.filter { $0.location != nil }) { player in
-                MapAnnotation(coordinate: player.location!) {
-                    NavigationLink(destination: PlayerDetails(viewModel: DependencyFactory.shared.getPlayerDetailsViewModel(), player: binding(for: player))) {
-                        MapPlayerIcon(player: player)
-                    }
+        Map(coordinateRegion: $coordinateRegion, annotationItems: playersStore.players.filter { $0.location != nil }) { player in
+            MapAnnotation(coordinate: player.location!) {
+                NavigationLink(destination: PlayerDetails(viewModel: DependencyFactory.shared.getPlayerDetailsViewModel(), player: binding(for: player))) {
+                    MapPlayerIcon(player: player)
                 }
             }
-            .ignoresSafeArea(edges: .top)
-        //}
+        }
+        .ignoresSafeArea(edges: .top)
     }
     
     private func binding(for player: Player) -> Binding<Player> {

@@ -29,6 +29,8 @@ struct SignInView: View {
                             
                             HStack{
                                 TextField("Enter Your Email address", text: $viewModel.email)
+                                    .disableAutocorrection(true)
+                                    .autocapitalization(.none)
                             }
                             
                             Divider()
@@ -73,10 +75,12 @@ struct SignInView: View {
                     .padding(.top, 25)
                     
                 }
-                .sheet(isPresented: $viewModel.showSignUpView) {
-                    SignUpView(viewModel: DependencyFactory.shared.getSignUpViewModel())
-                }
             }
+        }
+        .sheet(isPresented: $viewModel.showSignUpView) {
+            SignUpView(viewModel: DependencyFactory.shared.getSignUpViewModel())
+                .environment(\.colorScheme, settings.colorScheme)
+                .accentColor(settings.color)
         }
         .alert(isPresented: $viewModel.showAlert) {
             Alert(title: Text("Error"), message: Text(viewModel.errorMessage), dismissButton: .default(Text("Ok")))

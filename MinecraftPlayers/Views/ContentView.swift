@@ -28,11 +28,13 @@ struct ContentView: View {
         .environment(\.colorScheme, settings.colorScheme)
         .font(.custom(settings.fontName, size: settings.fontSize))
         .accentColor(settings.color)
+        .environment(\.locale, .init(identifier: settings.locale))
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         SignInView(viewModel: DependencyFactory.shared.getSignInViewModel())
+            .environmentObject(getResetSettings())
     }
 }

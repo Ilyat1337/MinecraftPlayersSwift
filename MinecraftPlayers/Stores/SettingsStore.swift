@@ -19,7 +19,7 @@ final class SettingsStore: ObservableObject {
         static let fontSize = "font_size"
     }
     
-    private static let defaultLocale = "en"
+    private static let defaultLocale = "ru"
     private static let defaultColor = Color.orange
     private static let defaultIsDarkMode = false
     private static let defaultFontName = "Helvetica"
