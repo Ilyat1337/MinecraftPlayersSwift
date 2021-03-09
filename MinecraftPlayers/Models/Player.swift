@@ -43,7 +43,7 @@ struct Player: Identifiable, Codable {
     }
     
     private enum CodingKeys: String, CodingKey {
-        case id, email, password, nickname, occupation, favouriteMob, favouriteServerAddress, privilege, realworldName, country, city, age, avatarId, imageIds, videoUrl
+        case id, email, password, nickname, occupation, favouriteMob, favouriteServerAddress, privilege, realworldName, country, city, age, avatarId, imageIds, videoUrl, location
     }
     
     @DocumentID var id = UUID().uuidString
@@ -69,7 +69,7 @@ struct Player: Identifiable, Codable {
     var avatarImage: Image = Image("Steve")
     
     var imageIds: [String] = []
-    var images: [Image]?
+    var images: [UIImage]?
     
     var videoUrl: URL?
     
@@ -89,7 +89,7 @@ struct Player: Identifiable, Codable {
 //        self.avatarId = avatarId
 //    }
     
-    mutating func setImages(images: [Image]) {
+    mutating func setImages(images: [UIImage]) {
         self.images = images
     }
     
@@ -98,8 +98,23 @@ struct Player: Identifiable, Codable {
     }
 }
 
+extension CLLocationCoordinate2D: Codable {
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.unkeyedContainer()
+        try container.encode(latitude)
+        try container.encode(longitude)
+    }
+    
+    public init(from decoder: Decoder) throws {
+        var container = try decoder.unkeyedContainer()
+        let latitude = try container.decode(CLLocationDegrees.self)
+        let longitude = try container.decode(CLLocationDegrees.self)
+        self.init(latitude: latitude, longitude: longitude)
+    }
+}
+
 //For preview
 
 func getPlayerForPreview() -> Player {
-    return Player(id: UUID().uuidString, email: "IlyaNotFound@enail.com", password: "123456", nickname: "IlyaNotFound", occupation: .mapArt, favouriteMob: .enderman, favouriteServerAddress: "mc.hypixel.net", privilege: .vipPlus, realworldName: "Ilya Trapashko", country: "Belarus", city: "Minsk", age: 19, location: CLLocationCoordinate2D(latitude: 53.89168, longitude: 27.54893), avatarId: "", imageIds: ["test"], images: [Image("Steve"), Image("Creeper"), Image("Skeleton"), Image("Blaze"), Image("Zombie")], videoUrl: URL(string: "https://bit.ly/swswift"))//"https://www.youtube.com/watch?v=I-sH53vXP2A"))
+    return Player(id: UUID().uuidString, email: "IlyaNotFound@enail.com", password: "123456", nickname: "IlyaNotFound", occupation: .mapArt, favouriteMob: .enderman, favouriteServerAddress: "mc.hypixel.net", privilege: .vipPlus, realworldName: "Ilya Trapashko", country: "Belarus", city: "Minsk", age: 19, location: CLLocationCoordinate2D(latitude: 53.89168, longitude: 27.54893), avatarId: "", imageIds: ["test"], images: [UIImage(named: "Steve")!, UIImage(named: "Creeper")!, UIImage(named: "Skeleton")!, UIImage(named: "Blaze")!, UIImage(named: "Zombie")!], videoUrl: URL(string: "https://bit.ly/swswift"))//"https://www.youtube.com/watch?v=I-sH53vXP2A"))
 }

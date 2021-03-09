@@ -30,8 +30,9 @@ class PlayerDetailsViewModel: ObservableObject {
                 return
             }
             mediaRepository.loadUserGallery(userId: player.id.wrappedValue!, imageIds: player.imageIds.wrappedValue) { loadedImages, error in
-                let images = loadedImages.map { Image(uiImage: UIImage(data: $0.data)!) }
-                self.player.wrappedValue.setImages(images: images)
+                let images = loadedImages.map { UIImage(data: $0.data)! }
+                //self.player.wrappedValue.setImages(images: images)
+                self.player.images.wrappedValue = images
             }
         }
     }

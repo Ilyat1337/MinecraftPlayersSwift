@@ -46,6 +46,9 @@
 		38182CAD25F7B53B00C5D02C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182C8B25F7B53B00C5D02C /* SceneDelegate.swift */; };
 		38182CB025F7B56C00C5D02C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38182CAF25F7B56B00C5D02C /* GoogleService-Info.plist */; };
 		38182CBD25F7CB0200C5D02C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38182CBF25F7CB0200C5D02C /* Localizable.strings */; };
+		38182CC425F7E33C00C5D02C /* PlayerEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182CC325F7E33C00C5D02C /* PlayerEdit.swift */; };
+		38182CC725F7E35200C5D02C /* PlayerEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182CC625F7E35200C5D02C /* PlayerEditViewModel.swift */; };
+		38182CCA25F7E36600C5D02C /* VideoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182CC925F7E36600C5D02C /* VideoPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +90,9 @@
 		38182CB625F7BE6B00C5D02C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MinecraftPlayers/Info.plist; sourceTree = "<group>"; };
 		38182CBE25F7CB0200C5D02C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		38182CC125F7CB2900C5D02C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		38182CC325F7E33C00C5D02C /* PlayerEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEdit.swift; sourceTree = "<group>"; };
+		38182CC625F7E35200C5D02C /* PlayerEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEditViewModel.swift; sourceTree = "<group>"; };
+		38182CC925F7E36600C5D02C /* VideoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,8 +229,8 @@
 		38182C7525F7B53A00C5D02C /* Edit */ = {
 			isa = PBXGroup;
 			children = (
-				38182C7625F7B53A00C5D02C /* LocationPicker.swift */,
-				38182C7725F7B53A00C5D02C /* ImagePicker.swift */,
+				38182CC325F7E33C00C5D02C /* PlayerEdit.swift */,
+				38182CC625F7E35200C5D02C /* PlayerEditViewModel.swift */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -232,8 +238,11 @@
 		38182C7825F7B53A00C5D02C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				38182C7725F7B53A00C5D02C /* ImagePicker.swift */,
+				38182C7625F7B53A00C5D02C /* LocationPicker.swift */,
 				38182C7925F7B53A00C5D02C /* ImageWithText.swift */,
 				38182C7A25F7B53A00C5D02C /* ImageGallery.swift */,
+				38182CC925F7E36600C5D02C /* VideoPicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -368,7 +377,9 @@
 				38182C9625F7B53B00C5D02C /* SignUpViewModel.swift in Sources */,
 				38182CA025F7B53B00C5D02C /* SignInView.swift in Sources */,
 				38182C8D25F7B53B00C5D02C /* MediaRepository.swift in Sources */,
+				38182CC725F7E35200C5D02C /* PlayerEditViewModel.swift in Sources */,
 				38182C9A25F7B53B00C5D02C /* PlayerDetailsViewModel.swift in Sources */,
+				38182CCA25F7E36600C5D02C /* VideoPicker.swift in Sources */,
 				38182C9725F7B53B00C5D02C /* SignUpView.swift in Sources */,
 				38182C9C25F7B53B00C5D02C /* LocationPicker.swift in Sources */,
 				38182CA425F7B53B00C5D02C /* ContentView.swift in Sources */,
@@ -376,6 +387,7 @@
 				38182C8C25F7B53B00C5D02C /* PlayersRepository.swift in Sources */,
 				38182CA825F7B53B00C5D02C /* SettingsStore.swift in Sources */,
 				38182C9D25F7B53B00C5D02C /* ImagePicker.swift in Sources */,
+				38182CC425F7E33C00C5D02C /* PlayerEdit.swift in Sources */,
 				38182C9125F7B53B00C5D02C /* Player.swift in Sources */,
 				38182C9025F7B53B00C5D02C /* AvatarService.swift in Sources */,
 				38182CA525F7B53B00C5D02C /* PlayerGridElement.swift in Sources */,

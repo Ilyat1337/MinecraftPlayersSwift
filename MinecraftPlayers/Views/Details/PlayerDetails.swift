@@ -35,7 +35,7 @@ struct PlayerDetails: View {
     let layout = Array(repeating: GridItem(.flexible()), count: previewImageCount + 1)
 
     @EnvironmentObject private var settings: SettingsStore
-    @State var isShowingGallery = false
+    @State private var isShowingEditView = false
     @ObservedObject var viewModel: PlayerDetailsViewModel
     @Binding var player: Player
     
@@ -82,9 +82,9 @@ struct PlayerDetails: View {
                     Section(header: Text("Images")) {
                         if let images = player.images {
                             LazyVGrid(columns: layout) {
-                                ForEach(0..<images.prefix(PlayerDetails.previewImageCount).count) { index in
+                                ForEach(0..<images.prefix(PlayerDetails.previewImageCount).count, id: \.self) { index in
                                     NavigationLink(destination: ImageGallery(images: player.images!, selectedTab: index)) {
-                                        images[index]
+                                        Image(uiImage: images[index])
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
                                             .frame(height: 50)
@@ -116,8 +116,12 @@ struct PlayerDetails: View {
         }
         .padding()
         .navigationBarItems(trailing: Button("Edit") {
+            isShowingEditView.toggle()
         })
         .navigationBarTitle(player.nickname, displayMode: .inline)
+        .fullScreenCover(isPresented: $isShowingEditView) {
+            PlayerEdit(viewModel: DependencyFactory.shared.getPlayerEditViewModel(), player: _player)
+        }
         .onAppear(perform: viewModel.loadPlayerGallery)
     }
 }

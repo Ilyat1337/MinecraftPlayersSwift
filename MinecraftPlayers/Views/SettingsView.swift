@@ -66,7 +66,6 @@ struct SettingsView: View {
                 .accentColor(.red)
             }
         }
-        .navigationBarTitle(Text("Settings"))
         //.environment(\.colorScheme, settings.colorScheme)
     }
 }

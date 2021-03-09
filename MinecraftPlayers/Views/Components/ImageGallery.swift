@@ -10,14 +10,14 @@ import SwiftUI
 
 struct ImageGallery: View {
     @State private var imageScale: CGFloat = 1.0
-    var images: [Image]
+    var images: [UIImage]
     @State var selectedTab: Int = 0
     
     var body: some View {
         ZStack {
             TabView(selection: $selectedTab) {
-                ForEach(0..<images.count) { index in
-                    images[index]
+                ForEach(0..<images.count, id: \.self) { index in
+                    Image(uiImage: images[index])
                         .interpolation(.none)
                         .resizable()
                         .scaledToFit()

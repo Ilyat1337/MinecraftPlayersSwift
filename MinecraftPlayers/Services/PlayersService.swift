@@ -30,13 +30,14 @@ class FirebasePlayersService: PlayersService {
                 return
             }
             
-            let avatarIds = players!.map { $0.avatarId }
-            guard let players = players else { return }
-            var playersMap: [String: Player] = [:]
-            players.forEach { playersMap[$0.avatarId] = $0 }
+            guard var players = players else { return }
+            let avatarIds = players.map { $0.avatarId }
             self.mediaRepository.loadAvatars(avatarIds: avatarIds) { imagesData, error in
-                for imageData in imagesData {
-                    playersMap[imageData.id]?.avatarImage = Image(uiImage: UIImage(data: imageData.data)!)
+                for i in 0..<players.count {
+                    let imageData = imagesData.first(where: { $0.id == players[i].avatarId })
+                    if let imageData = imageData {
+                        players[i].avatarImage = Image(uiImage: UIImage(data: imageData.data)!)
+                    }
                 }
                 
                 completion(players, nil)

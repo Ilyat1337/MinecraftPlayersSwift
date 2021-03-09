@@ -17,7 +17,7 @@ struct PlayerListView: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: layout, spacing: 20) {
-                ForEach(0..<playersStore.players.count) { index in
+                ForEach(0..<playersStore.players.count, id: \.self) { index in
                     NavigationLink(destination: PlayerDetails(viewModel: DependencyFactory.shared.getPlayerDetailsViewModel(), player: $playersStore.players[index])) {
                         PlayerGridElement(player: playersStore.players[index])
                             .accentColor(settings.isDarkMode ? .white : .black)
@@ -26,7 +26,6 @@ struct PlayerListView: View {
             }
             .padding(.horizontal)
         }
-        .navigationBarTitle(Text("Players"))
         .padding(.top, 0.3)
     }
 }

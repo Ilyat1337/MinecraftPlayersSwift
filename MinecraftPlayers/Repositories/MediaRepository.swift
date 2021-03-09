@@ -16,10 +16,11 @@ protocol MediaRepository {
     func uploadUserImages(userId: String, imagesData: [Data], completion: @escaping ([String], Error?) -> Void)
     func deleteUserImages(userId: String, imageIds: [String], completion: @escaping (Error?) -> Void)
     func uploadUserVideo(userId: String, videoData: Data, completion: @escaping (URL?, Error?) -> Void)
+    func deleteVideo(videoUrl: URL, completion: @escaping (Error?) -> Void)
 }
 
 class FirebaseMediaRepository: MediaRepository {
-    private let maxImageSize: Int64 = 1024 * 1024
+    private let maxImageSize: Int64 = 20 * 1024 * 1024
     
     private let avatarsPath = "avatars"
     private lazy var avatarsRef = Storage.storage().reference(withPath: avatarsPath)
@@ -28,8 +29,7 @@ class FirebaseMediaRepository: MediaRepository {
     
     func uploadAvatar(avatarData: Data, completion: @escaping (String?, Error?) -> Void) {
         let loadedAvatar = LoadedMedia(UUID().uuidString, avatarData)
-        let avatarRef = avatarsRef.child(loadedAvatar.id)
-        uploadMedia(direcoryRef: avatarRef, loadedMedia: loadedAvatar) { avatarId, error in
+        uploadMedia(direcoryRef: avatarsRef, loadedMedia: loadedAvatar) { avatarId, error in
             completion(loadedAvatar.id, error)
         }
     }
@@ -94,8 +94,10 @@ class FirebaseMediaRepository: MediaRepository {
     
     func uploadUserVideo(userId: String, videoData: Data, completion: @escaping (URL?, Error?) -> Void) {
         let videoId = UUID().uuidString
+        let metadata = StorageMetadata()
+        metadata.contentType = "video/mp4"
         let videoRef = Storage.storage().reference().child(userId).child(videosPath).child(videoId)
-        videoRef.putData(videoData, metadata: nil) { metadata, error in
+        videoRef.putData(videoData, metadata: metadata) { metadata, error in
             if error != nil {
                 completion(nil, error)
                 return
@@ -104,6 +106,12 @@ class FirebaseMediaRepository: MediaRepository {
             videoRef.downloadURL { url, error in
                 completion(url, error)
             }
+        }
+    }
+    
+    func deleteVideo(videoUrl: URL, completion: @escaping (Error?) -> Void) {
+        Storage.storage().reference(forURL: videoUrl.absoluteString).delete { error in
+            completion(error)
         }
     }
     
