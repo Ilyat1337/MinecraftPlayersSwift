@@ -49,6 +49,7 @@
 		38182CC425F7E33C00C5D02C /* PlayerEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182CC325F7E33C00C5D02C /* PlayerEdit.swift */; };
 		38182CC725F7E35200C5D02C /* PlayerEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182CC625F7E35200C5D02C /* PlayerEditViewModel.swift */; };
 		38182CCA25F7E36600C5D02C /* VideoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38182CC925F7E36600C5D02C /* VideoPicker.swift */; };
+		389ED4B125F92071002F5E0F /* PrivilegeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389ED4B025F92071002F5E0F /* PrivilegeText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,7 @@
 		38182CC325F7E33C00C5D02C /* PlayerEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEdit.swift; sourceTree = "<group>"; };
 		38182CC625F7E35200C5D02C /* PlayerEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEditViewModel.swift; sourceTree = "<group>"; };
 		38182CC925F7E36600C5D02C /* VideoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPicker.swift; sourceTree = "<group>"; };
+		389ED4B025F92071002F5E0F /* PrivilegeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivilegeText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 				38182C7925F7B53A00C5D02C /* ImageWithText.swift */,
 				38182C7A25F7B53A00C5D02C /* ImageGallery.swift */,
 				38182CC925F7E36600C5D02C /* VideoPicker.swift */,
+				389ED4B025F92071002F5E0F /* PrivilegeText.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				38182CA725F7B53B00C5D02C /* LoggedUserStore.swift in Sources */,
 				38182C8F25F7B53B00C5D02C /* PlayersService.swift in Sources */,
 				38182C9825F7B53B00C5D02C /* MapView.swift in Sources */,
+				389ED4B125F92071002F5E0F /* PrivilegeText.swift in Sources */,
 				38182CA325F7B53B00C5D02C /* MainView.swift in Sources */,
 				38182C8E25F7B53B00C5D02C /* AuthenticationService.swift in Sources */,
 				38182C9925F7B53B00C5D02C /* PlayerDetails.swift in Sources */,

@@ -79,6 +79,7 @@ struct SignInView: View {
         }
         .sheet(isPresented: $viewModel.showSignUpView) {
             SignUpView(viewModel: DependencyFactory.shared.getSignUpViewModel())
+                .environmentObject(settings)
                 .environment(\.colorScheme, settings.colorScheme)
                 .accentColor(settings.color)
         }

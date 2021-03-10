@@ -29,6 +29,19 @@ struct Player: Identifiable, Codable {
         case vipPlus = "VIP+"
         case mvp = "MVP"
         case mvpPlus = "MVP+"
+        
+        func getColor() -> Color {
+            switch self {
+            case .admin:
+                return Color.red
+            case .vip, .vipPlus:
+                return Color(red: 85 / 255, green: 1, blue: 85 / 255)
+            case .mvp, .mvpPlus:
+                return Color(red: 85 / 255, green: 1, blue: 1)
+            default:
+                return Color.black
+            }
+        }
     }
     
     enum MobType: String, CaseIterable, Codable {
@@ -72,26 +85,6 @@ struct Player: Identifiable, Codable {
     var images: [UIImage]?
     
     var videoUrl: URL?
-    
-//    init(id: String, email: String, password: String, nickname: String, occupation: Player.OccupationType, favouriteMob: Player.MobType, favouriteServerAddress: String, privilege: Player.PrivilegeType, realworldName: String, country: String, city: String, age: Int, avatarId: String) {
-//        self.id = id
-//        self.email = email
-//        self.password = password
-//        self.nickname = nickname
-//        self.occupation = occupation
-//        self.favouriteMob = favouriteMob
-//        self.favouriteServerAddress = favouriteServerAddress
-//        self.privilege = privilege
-//        self.realworldName = realworldName
-//        self.country = country
-//        self.city = city
-//        self.age = age
-//        self.avatarId = avatarId
-//    }
-    
-    mutating func setImages(images: [UIImage]) {
-        self.images = images
-    }
     
     mutating func update(player: Player) {
         self = player

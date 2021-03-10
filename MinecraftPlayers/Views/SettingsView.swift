@@ -13,6 +13,7 @@ struct SettingsView: View {
     
     @EnvironmentObject private var settings: SettingsStore
     @EnvironmentObject private var loggedUserStore: LoggedUserStore
+    @EnvironmentObject private var playersStore: PlayersStore
     
     var body: some View {
         Form {
@@ -55,7 +56,8 @@ struct SettingsView: View {
             
             Section {
                 Button(action: {
-                    loggedUserStore.userId = ""
+                    playersStore.resetArePlayersLoaded()
+                    loggedUserStore.logOut()
                 }) {
                     HStack {
                         Spacer()
@@ -75,5 +77,6 @@ struct SettingsView_Previews: PreviewProvider {
         SettingsView()
             .environmentObject(getResetSettings())
             .environmentObject(getResetLoggedUserStore())
+            .environmentObject(getLoadedPlayersStore())
     }
 }

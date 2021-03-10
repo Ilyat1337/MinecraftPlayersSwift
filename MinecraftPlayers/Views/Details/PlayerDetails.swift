@@ -56,9 +56,6 @@ struct PlayerDetails: View {
                 .shadow(radius: 10)
             Text(player.nickname)
                 .font(.custom(settings.fontName, size: settings.fontSize * 1.7))
-            if viewModel.isLoadingImages {
-                Text("Loading!!!")
-            }
             Divider()
             VStack(alignment: .leading, spacing: 0) {
                 Section(header: Text("Ingame")) {
@@ -67,7 +64,7 @@ struct PlayerDetails: View {
                 }
                 Section(header: Text("Favourite server")) {
                     DetailRow("Server address", Text(player.favouriteServerAddress))
-                    DetailRow("Privilege", Text(player.privilege.rawValue))
+                    DetailRow("Privilege", PrivilegeText(privilege: player.privilege))
                 }
                 Section(header: Text("Real world")) {
                     DetailRow("Name", Text(player.realworldName))
@@ -110,12 +107,13 @@ struct PlayerDetails: View {
                         }
                     }
                 }
-//                if let videoUrl = player.videoUrl {
-//                    Section(header: Text("Video")) {
-//                        VideoPlayer(player: AVPlayer(url: videoUrl))
-//                            .frame(height: 200)
-//                    }
-//                }
+                if let videoUrl = player.videoUrl {
+                    Section(header: Text("Video")) {
+                        VideoPlayer(player: AVPlayer(url: videoUrl))
+                            .frame(height: 200)
+                    }
+                    .padding(.top, 10)
+                }
             }
         }
         .padding()
@@ -124,11 +122,12 @@ struct PlayerDetails: View {
                 Button(action: { isShowingEditView.toggle() }) {
                     Text("Edit")
                 }
-                .disabled(viewModel.isLoadingImages)
+                .disabled(!player.imageIds.isEmpty && player.images == nil)
         )
         .navigationBarTitle(player.nickname, displayMode: .inline)
         .fullScreenCover(isPresented: $isShowingEditView) {
             PlayerEdit(viewModel: DependencyFactory.shared.getPlayerEditViewModel(), player: _player)
+                .environmentObject(settings)
                 .environment(\.colorScheme, settings.colorScheme)
                 .accentColor(settings.color)
         }

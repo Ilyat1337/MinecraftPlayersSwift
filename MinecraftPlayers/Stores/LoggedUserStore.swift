@@ -21,6 +21,10 @@ class LoggedUserStore: ObservableObject {
     init() {
         userId = UserDefaults.standard.string(forKey: userIdKey) ?? ""
     }
+    
+    func logOut() {
+        userId = ""
+    }
 }
 
 //For preview

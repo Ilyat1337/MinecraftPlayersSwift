@@ -82,7 +82,7 @@ struct PlayerEdit: View {
                         .autocapitalization(.none)
                     Picker(selection: $viewModel.privilege, label: Text("Privilege")) {
                         ForEach(Player.PrivilegeType.allCases, id: \.self) {
-                            Text(LocalizedStringKey($0.rawValue))
+                            PrivilegeText(privilege: $0)
                         }
                     }
                 }
@@ -106,7 +106,7 @@ struct PlayerEdit: View {
                             Spacer()
                             HStack {
                                 CircleButton(imageName: "plus", action: { sheetConfig.show(mode: .location) })
-                                    .padding(.trailing, 5)                                
+                                    .padding(.trailing, 5)
                                 CircleButton(imageName: "minus", action: viewModel.resetLocation)
                             }
                         }

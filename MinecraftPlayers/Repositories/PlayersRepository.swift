@@ -28,9 +28,10 @@ class FirebasePlayersRepository: PlayersRepository {
                 return
             }
             
-            let players = querySnapshot?.documents.compactMap { documnent in
+            var players = querySnapshot?.documents.compactMap { documnent in
                 try? documnent.data(as: Player.self)
             } ?? []
+            players.sort(by: { $0.nickname < $1.nickname })
             completion(players, nil)
         }
     }

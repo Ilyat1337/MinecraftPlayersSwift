@@ -12,7 +12,6 @@ import SwiftUI
 
 class PlayerDetailsViewModel: ObservableObject {
     @Published var player: Binding<Player>!
-    @Published var isLoadingImages = true
     
     private let mediaRepository: MediaRepository
     
@@ -28,20 +27,15 @@ class PlayerDetailsViewModel: ObservableObject {
         if player.images.wrappedValue == nil {
             if player.imageIds.wrappedValue.isEmpty {
                 player.images.wrappedValue = []
-                isLoadingImages = false
                 return
             }
             
             mediaRepository.loadUserGallery(userId: player.id.wrappedValue!, imageIds: player.imageIds.wrappedValue) { loadedImages, error in
                 let images = loadedImages.map { UIImage(data: $0.data)! }
                 DispatchQueue.main.async {
-                    self.isLoadingImages.toggle()
-                    self.player.images.wrappedValue = images                    
-                    print(self.isLoadingImages)
+                    self.player.images.wrappedValue = images
                 }
             }
-        } else {
-            isLoadingImages = false
         }
     }
 }

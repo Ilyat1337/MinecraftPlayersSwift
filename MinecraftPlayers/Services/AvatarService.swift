@@ -30,21 +30,6 @@ class AvatarService {
             .replaceError(with: defaultAvatarData)
             .receive(on: DispatchQueue.main)
             .sink { completion($0) }
-//            .sink(receiveCompletion: { result in
-//                print("Receive completion: ")
-//                switch result {
-//                    case .failure(let error): //{
-//                        print(error)
-//                        completion(self.defaultAvatarData)
-//                        break
-//                    //}
-//                case .finished:
-//                    break
-//                }
-//            }, receiveValue: {data in
-//                print("Received inside!")
-//                completion(data)
-//            })
     }
     
     func getUuid(nickname: String) -> AnyPublisher<String, Error> {

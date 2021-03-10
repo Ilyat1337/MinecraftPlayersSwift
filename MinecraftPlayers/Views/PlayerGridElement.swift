@@ -21,23 +21,17 @@ struct PlayerGridElement: View {
                 .cornerRadius(10)
                 .aspectRatio(1, contentMode: .fit)
                 .padding(.horizontal, 20)
-                
-                //.frame(width: 80, height: 80)
-                //.cornerRadius(10)
-//                .overlay(
-//                    RoundedRectangle(cornerRadius: 10)
-//                        .stroke(Color.orange, lineWidth: 4)
             Text(player.nickname)
                 .fontWeight(.bold)
                 .lineLimit(1)
-            Text(player.occupation.rawValue)
+            Text(LocalizedStringKey(player.occupation.rawValue))
                 .lineLimit(1)
             Text("\(player.age) y.o.")
                 .lineLimit(1)
         }
         .padding(10)
         .overlay(RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.orange, lineWidth: 4))
+                    .stroke(settings.color, lineWidth: 4))
     }
 }
 

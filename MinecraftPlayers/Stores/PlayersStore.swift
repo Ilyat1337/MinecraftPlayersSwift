@@ -31,6 +31,10 @@ class PlayersStore: ObservableObject {
             }
         }
     }
+    
+    func resetArePlayersLoaded() {
+        arePlayersLoaded = false
+    }
 }
 
 //For preview
