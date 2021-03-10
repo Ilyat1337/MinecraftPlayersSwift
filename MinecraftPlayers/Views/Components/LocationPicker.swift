@@ -10,7 +10,7 @@ import SwiftUI
 import MapKit
 
 struct LocationPicker: View {
-    @Environment(\.presentationMode) var isShowing
+    @Environment(\.presentationMode) private var isShowing
     @Binding var coordinateRegion: MKCoordinateRegion
     
     var body: some View {

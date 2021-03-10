@@ -7,17 +7,32 @@
 
 import SwiftUI
 
-enum SheetMode{
-    case video, image
+fileprivate enum SheetMode {
+    case video, image, location
 }
 
-class SheetConfig: ObservableObject{
-    @Published var mode: SheetMode?
+fileprivate class SheetConfig: ObservableObject {
+    var mode: SheetMode = .image
     @Published var show: Bool = false
     
     func show(mode: SheetMode){
         self.mode = mode
         self.show = true
+    }
+}
+
+fileprivate struct CircleButton: View {
+    var imageName: String
+    var action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            Image(systemName: imageName)
+        }
+        .frame(width: 20, height: 20)
+        .background(Color.gray)
+        .foregroundColor(.white)
+        .clipShape(Circle())
     }
 }
 
@@ -30,14 +45,6 @@ struct PlayerEdit: View {
     init(viewModel: PlayerEditViewModel, player: Binding<Player>) {
         self.viewModel = viewModel
         viewModel.onViewCreated(player: player)
-    }
-    
-    func onAddVideoClick() {
-        sheetConfig.show(mode: .video)
-    }
-    
-    func onAddImageClick() {
-        sheetConfig.show(mode: .image)
     }
     
     var body: some View {
@@ -93,39 +100,47 @@ struct PlayerEdit: View {
                 
                 Section(
                     header:
-                        Text("Location")
-                            .font(.custom(settings.fontName, size: settings.fontSize * 0.75))
+                        HStack {
+                            Text("Location")
+                                .font(.custom(settings.fontName, size: settings.fontSize * 0.75))
+                            Spacer()
+                            HStack {
+                                CircleButton(imageName: "plus", action: { sheetConfig.show(mode: .location) })
+                                    .padding(.trailing, 5)                                
+                                CircleButton(imageName: "minus", action: viewModel.resetLocation)
+                            }
+                        }
                 ) {
                     TextField("Latitude", text: $viewModel.latitude)
+                        .disabled(true)
                     TextField("Longitude", text: $viewModel.longitude)
+                        .disabled(true)
                 }
                 
                 Section(header: Text("Images")) {
-                    ForEach(0..<viewModel.displayedImages.count, id: \.self){i in
+                    ForEach(0..<viewModel.displayedImages.count, id: \.self) { i in
                         Image(uiImage: viewModel.displayedImages[i].image)
                             .resizable()
                             .scaledToFill()
                             .frame(width: 90, height: 90)
                             .cornerRadius(7)
                     }
-                    .onDelete{ deletedImagesIndexes in viewModel.handleRemoveImage(deletedImagesIndexes: deletedImagesIndexes)}
-                    
+                    .onDelete { deletedImagesIndexes in
+                        viewModel.handleRemoveImage(deletedImagesIndexes: deletedImagesIndexes)
+                    }
                 }
                 
                 Section{
                     HStack {
                         Spacer()
-                        Button(action: onAddImageClick) {
+                        Button(action: { sheetConfig.show(mode: .image) }) {
                             Text("Add image")
                         }
                         Spacer()
                     }
                 }
                 
-                Section{
-                    if (viewModel.isSavedVideoShouldBeDeleted) {
-                        Text("Saved video will be deleted...")
-                    }
+                Section {
                     HStack {
                         Spacer()
                         if ((viewModel.isPlayerHasSavedVideo && !viewModel.isSavedVideoShouldBeDeleted) || viewModel.newVideoLocalURL != nil) {
@@ -133,20 +148,9 @@ struct PlayerEdit: View {
                                 Text("Delete video")
                             }
                         } else {
-                            Button(action: onAddVideoClick) {
+                            Button(action: { sheetConfig.show(mode: .video) }) {
                                 Text("Add video")
                             }
-                        }
-                        Spacer()
-                    }
-                }
-                
-                
-                Section {
-                    HStack {
-                        Spacer()
-                        Button(action: viewModel.handleUpdateAuthorButtonClick) {
-                            Text("Save")
                         }
                         Spacer()
                     }
@@ -160,18 +164,26 @@ struct PlayerEdit: View {
                         Text("Cancel")
                     },
                 trailing:
-                    Button(action: viewModel.handleUpdateAuthorButtonClick) {
-                        Text("Save")
+                    HStack {
+                        if viewModel.isPlayerUpdating {
+                            ProgressView()
+                        } else {
+                            Button(action: viewModel.handleUpdatePlayerButtonClick) {
+                                Text("Save")
+                            }
+                        }
                     }
             )
         }
         .sheet(isPresented: $sheetConfig.show) {
-            if (sheetConfig.mode == .image) {
+            switch sheetConfig.mode {
+            case .image:
                 ImagePicker(cb: viewModel.addImage)
-            } else if (sheetConfig.mode == .video) {
+            case .video:
                 VideoPicker(videoURL: $viewModel.newVideoLocalURL)
-            } else {
-                EmptyView()
+            case .location:
+                LocationPicker(coordinateRegion: $viewModel.coordinateRegion)
+                    .onDisappear(perform: { viewModel.updateLocationText() })
             }
         }
     }

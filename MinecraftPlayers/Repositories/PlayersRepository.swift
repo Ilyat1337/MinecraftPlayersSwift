@@ -28,8 +28,6 @@ class FirebasePlayersRepository: PlayersRepository {
                 return
             }
             
-            let count = querySnapshot?.documents.count
-            
             let players = querySnapshot?.documents.compactMap { documnent in
                 try? documnent.data(as: Player.self)
             } ?? []

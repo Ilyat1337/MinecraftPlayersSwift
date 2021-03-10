@@ -43,6 +43,7 @@ struct MainView: View {
                 playersStore.loadAllPlayers()
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

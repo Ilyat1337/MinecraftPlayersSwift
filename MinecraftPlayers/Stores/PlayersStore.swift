@@ -25,7 +25,9 @@ class PlayersStore: ObservableObject {
             arePlayersLoaded = true
             print("Loading players")
             playersService.loadAllPlayers { players, error in
-                self.players = players
+                DispatchQueue.main.async {
+                    self.players = players
+                }
             }
         }
     }

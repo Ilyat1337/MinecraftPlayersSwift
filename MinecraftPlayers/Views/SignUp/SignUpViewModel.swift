@@ -83,7 +83,9 @@ class SignUpViewModel: ObservableObject {
                         return
                     }
 
-                    self.loggedUserStore.userId = userId
+                    DispatchQueue.main.async {
+                        self.loggedUserStore.userId = userId
+                    }
                 }
             }
         }

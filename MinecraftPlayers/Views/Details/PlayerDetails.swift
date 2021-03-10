@@ -56,6 +56,9 @@ struct PlayerDetails: View {
                 .shadow(radius: 10)
             Text(player.nickname)
                 .font(.custom(settings.fontName, size: settings.fontSize * 1.7))
+            if viewModel.isLoadingImages {
+                Text("Loading!!!")
+            }
             Divider()
             VStack(alignment: .leading, spacing: 0) {
                 Section(header: Text("Ingame")) {
@@ -107,20 +110,27 @@ struct PlayerDetails: View {
                         }
                     }
                 }
-                if let videoUrl = player.videoUrl {
-                    Section(header: Text("Video")) {
-                        VideoPlayer(player: AVPlayer(url: videoUrl))
-                    }
-                }
+//                if let videoUrl = player.videoUrl {
+//                    Section(header: Text("Video")) {
+//                        VideoPlayer(player: AVPlayer(url: videoUrl))
+//                            .frame(height: 200)
+//                    }
+//                }
             }
         }
         .padding()
-        .navigationBarItems(trailing: Button("Edit") {
-            isShowingEditView.toggle()
-        })
+        .navigationBarItems(
+            trailing:
+                Button(action: { isShowingEditView.toggle() }) {
+                    Text("Edit")
+                }
+                .disabled(viewModel.isLoadingImages)
+        )
         .navigationBarTitle(player.nickname, displayMode: .inline)
         .fullScreenCover(isPresented: $isShowingEditView) {
             PlayerEdit(viewModel: DependencyFactory.shared.getPlayerEditViewModel(), player: _player)
+                .environment(\.colorScheme, settings.colorScheme)
+                .accentColor(settings.color)
         }
         .onAppear(perform: viewModel.loadPlayerGallery)
     }
