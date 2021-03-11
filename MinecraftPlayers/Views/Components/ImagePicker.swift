@@ -12,7 +12,7 @@ import Firebase
 
 struct ImagePicker: UIViewControllerRepresentable {
     @Environment(\.presentationMode) var presentationMode
-    var cb: (_: UIImage) -> Void
+    var callback: (_: UIImage) -> Void
     
     class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         let parent: ImagePicker
@@ -23,7 +23,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
             if let image = info[.originalImage] as? UIImage {
-                parent.cb(image)
+                parent.callback(image)
             }
             
             parent.presentationMode.wrappedValue.dismiss()

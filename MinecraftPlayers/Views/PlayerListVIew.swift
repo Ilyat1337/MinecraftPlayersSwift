@@ -32,8 +32,11 @@ struct PlayerListView: View {
 
 struct PlayerListView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerListView()
-            .environmentObject(getLoadedPlayersStore())
-            .environmentObject(getResetSettings())
+        NavigationView {
+            PlayerListView()
+                .environmentObject(getLoadedPlayersStore())
+                .environmentObject(getResetSettings())
+                .navigationBarHidden(true)
+        }
     }
 }

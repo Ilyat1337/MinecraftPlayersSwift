@@ -55,11 +55,7 @@ struct PlayerEdit: View {
                         Text("Ingame")
                             .font(.custom(settings.fontName, size: settings.fontSize * 0.75))
                 ) {
-                    TextField("Nickname", text: $viewModel.nickname, onEditingChanged: { isEditStart in
-//                        if !isEditStart {
-//                            viewModel.loadAvatarForNickname(nickname: viewModel.nickname)
-//                        }
-                    })
+                    TextField("Nickname", text: $viewModel.nickname)
                     Picker(selection: $viewModel.occupation, label: Text("Occupation")) {
                         ForEach(Player.OccupationType.allCases, id: \.self) { occupation in
                             ImageWithText(occupation.rawValue, occupation.rawValue)
@@ -178,7 +174,7 @@ struct PlayerEdit: View {
         .sheet(isPresented: $sheetConfig.show) {
             switch sheetConfig.mode {
             case .image:
-                ImagePicker(cb: viewModel.addImage)
+                ImagePicker(callback: viewModel.addImage)
             case .video:
                 VideoPicker(videoURL: $viewModel.newVideoLocalURL)
             case .location:

@@ -92,7 +92,7 @@ struct PlayerDetails: View {
                                             .cornerRadius(3)
                                     }
                                 }
-                                NavigationLink(destination: ImageGallery(images: player.images!)) {
+                                NavigationLink(destination: GridImageGallery(images: player.images!)) {
                                     Text("View all")
                                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                                 }

@@ -33,7 +33,9 @@ class SignInViewModel: ObservableObject {
             }
             
             if let userId = userId {
-                self.loggedUserStore.userId = userId
+                DispatchQueue.main.async {
+                    self.loggedUserStore.userId = userId
+                }
             }
         }
     }

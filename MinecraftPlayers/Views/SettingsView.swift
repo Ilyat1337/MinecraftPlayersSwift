@@ -74,9 +74,12 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
-            .environmentObject(getResetSettings())
-            .environmentObject(getResetLoggedUserStore())
-            .environmentObject(getLoadedPlayersStore())
+        NavigationView {
+            SettingsView()
+                .environmentObject(getResetSettings())
+                .environmentObject(getResetLoggedUserStore())
+                .environmentObject(getLoadedPlayersStore())
+                .navigationBarHidden(true)
+        }
     }
 }
