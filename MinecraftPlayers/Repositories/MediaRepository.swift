@@ -121,29 +121,29 @@ class FirebaseMediaRepository: MediaRepository {
             completion([], nil)
         }
         
-        var results = [ReturnType]()
+        var results: [ReturnType?]  = Array(repeating: nil, count: tasksData.count)
         var taskCount = 0
         var isErrorOccured = false
         let lock = NSLock()
         
-        for taskData in tasksData {
+        for (index, taskData) in tasksData.enumerated() {
             task(directoryRef, taskData) { (returnValue, error) in
                 if let error = error {
                     if !isErrorOccured {
                         isErrorOccured = true
-                        completion(results, error)
+                        completion([], error)
                     }
                     return
                 }
                 
                 lock.lock()
                 
-                results.append(returnValue!)
+                results[index] = returnValue
                 taskCount += 1
                 
                 if taskCount == tasksData.count {
                     lock.unlock()
-                    completion(results, nil)
+                    completion(results.map { $0! }, nil)
                     return
                 }
                 

@@ -93,9 +93,11 @@ class SignUpViewModel: ObservableObject {
     
     private func handleError(error: Error?) -> Bool {
         if let error = error {
-            errorMessage = error.localizedDescription
-            showAlert = true
-            isSigningUp = false
+            DispatchQueue.main.async {
+                self.errorMessage = error.localizedDescription
+                self.showAlert = true
+                self.isSigningUp = false
+            }
             return true
         }
         

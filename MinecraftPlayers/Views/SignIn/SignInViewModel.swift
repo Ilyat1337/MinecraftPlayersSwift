@@ -27,8 +27,10 @@ class SignInViewModel: ObservableObject {
     func signIn() {
         authenticationService.signInWithEmail(email: email, password: password) { userId, error in
             if let error = error {
-                self.errorMessage = error.localizedDescription
-                self.showAlert = true
+                DispatchQueue.main.async {
+                    self.errorMessage = error.localizedDescription
+                    self.showAlert = true
+                }                
                 return
             }
             

@@ -13,8 +13,8 @@ class AvatarService {
     let requestTimeout = 7.0
     let urlSessionCongiguration: URLSessionConfiguration
     let uuidUrlFormat = "https://api.mojang.com/users/profiles/minecraft/%@"
-//    let avatarUrlFormat = "https://minotar.net/helm/%@/8"
-    let avatarUrlFormat = "https://crafatar.com/avatars/%@?size=8&overlay"
+    let avatarUrlFormat = "https://minotar.net/helm/%@/8"
+//    let avatarUrlFormat = "https://crafatar.com/avatars/%@?size=8&overlay"
     let defaultAvatarData = UIImage(named: "Steve")!.pngData()!
     
     private var cancellable: AnyCancellable?

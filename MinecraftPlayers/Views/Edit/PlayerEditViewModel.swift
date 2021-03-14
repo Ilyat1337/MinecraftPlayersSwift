@@ -140,7 +140,7 @@ class PlayerEditViewModel: ObservableObject {
             CLLocationCoordinate2D(latitude: Double(latitude)!, longitude: Double(longitude)!) : nil
         let videoUrl = (isSavedVideoShouldBeDeleted || player.wrappedValue.videoUrl == nil) ? newVideoUrl : player.wrappedValue.videoUrl
         
-        return Player(id: player.wrappedValue.id, email: player.wrappedValue.email, password: player.wrappedValue.password, nickname: nickname, occupation: occupation, favouriteMob: favouriteMob, favouriteServerAddress: favouriteServerAddress, privilege: privilege, realworldName: realworldName, country: country, city: city, age: Int(age)!, location: location, avatarId: player.wrappedValue.avatarId, avatarImage: player.wrappedValue.avatarImage, imageIds: imageIds, images: images, videoUrl: videoUrl)
+        return Player(id: player.wrappedValue.id, email: player.wrappedValue.email, password: player.wrappedValue.password, nickname: nickname, occupation: occupation, favouriteMob: favouriteMob, favouriteServerAddress: favouriteServerAddress, privilege: privilege, realworldName: realworldName, country: country, city: city, age: Int(age) ?? 0, location: location, avatarId: player.wrappedValue.avatarId, avatarImage: player.wrappedValue.avatarImage, imageIds: imageIds, images: images, videoUrl: videoUrl)
     }
 
     
